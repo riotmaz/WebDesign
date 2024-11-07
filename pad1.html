@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+            header{
+                text-align: center;
+                border: 2px solid black;
+                height: 20px;
+                padding: 20px;
+                background-color: blueviolet;
+            }
+            nav{
+                text-align: center;
+                border: 2px solid black;
+                height: 20px;
+                padding: 20px;
+                background-color: aqua;
+            }
+            main{
+                text-align: center;
+                border: 2px;
+                height: 200px;
+            text-align: center;
+                background-color: pink;
+                width: 50%;
+                float: left;
+                border: 1px solid black;
+            }
+            aside{
+                text-align: center;
+                width: 50%;
+                height: 100px;
+                
+                background-color: blue;
+                float: left;
+                border: 1px solid black;
+            }
+            p{
+                text-align: center;
+                padding: 85px;
+        
+            }
+            #first{
+                padding: 30px;
+            }
+            section::after{
+                content: "";
+                display: table;
+                clear: both;
+            }
+            footer{
+                text-align: center;
+                border: 2px solid black;
+                height: 20px;
+                padding: 30px;
+                background-color: blueviolet;
+            }
+    </style>
+</head>
+<body>
+    <header>HEADER</header>
+    <nav>NAVIGATION</nav>
+    <section>
+        
+        <main>
+            <p>MAIN</p>
+        </main>
+        <aside>
+           <p id="first"> ASIDE</p>
+        </aside>
+        <aside>
+            <p id="first">section</p>
+        </aside>
+    </section>
+    <footer>ASIDE</footer>
+    <footer>FOOTER</footer>
+</body>
+</html>
