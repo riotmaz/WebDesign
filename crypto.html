@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Pricing Chart</title>
+    <link rel="stylesheet" href="styles.css">
+   <style>
+
+    /* styles.css */
+
+    * {
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+    
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f0f2f5;
+        margin: 0;
+    }
+    
+    .crypto-chart {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 350px;
+    }
+    
+    .crypto {
+        background-color: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 16px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        position: relative;
+    }
+    
+    .crypto-logo {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+        border-radius: 50%;
+    }
+    
+    .crypto h2 {
+        margin: 0;
+        font-size: 1.4rem;
+        color: #333;
+    }
+    
+    .crypto p {
+        margin: 8px 0;
+        font-size: 1rem;
+        color: #666;
+    }
+    
+    .change {
+        font-weight: bold;
+    }
+    
+    .change.positive {
+        color: #4caf50; /* Green for positive */
+    }
+    
+    .change.negative {
+        color: #f44336; /* Red for negative */
+    }
+    </style>
+</head>
+
+<body>
+    <div class="crypto-chart">
+        <!-- Each cryptocurrency section starts here -->
+        <div class="crypto">
+            <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="Bitcoin Logo" class="crypto-logo">
+            <h2>Bitcoin (BTC)</h2>
+            <p>Price: $29,000</p>
+            <p class="change positive">24h Change: +2.5%</p>
+            <p>Total Change: +15.8%</p>
+        </div>
+        
+        <div class="crypto">
+            <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" alt="Ethereum Logo" class="crypto-logo">
+            <h2>Ethereum (ETH)</h2>
+            <p>Price: $1,850</p>
+            <p class="change negative">24h Change: -1.2%</p>
+            <p>Total Change: +8.3%</p>
+        </div>
+
+        <div class="crypto">
+            <img src="https://cryptologos.cc/logos/cardano-ada-logo.png" alt="Cardano Logo" class="crypto-logo">
+            <h2>Cardano (ADA)</h2>
+            <p>Price: $0.30</p>
+            <p class="change positive">24h Change: +1.1%</p>
+            <p>Total Change: +20.4%</p>
+        </div>
+        
+        <!-- Add more cryptocurrencies by duplicating the above block -->
+    </div>
+</body>
+</html>

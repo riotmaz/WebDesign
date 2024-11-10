@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        border: 1px solid black;
+        width: 100%;
+        height: 500px;
+        background-color: rgb(248, 238, 223);
+    }
+    th, td{
+        border-top: 2px solid black; 
+        border-left: 2px solid black;
+        text-align: center;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    #table1{
+        width:100%; 
+        height:100%;
+        border:0px;
+        border-collapse:separate; 
+    }
+    
+</style>
+<body>
+    <table>
+        <tr rowspan="3" colspan="8">
+            <th colspan="2" rowspan="3" width="25%" style="border-top-left-radius: 1px;"> Day</th>
+                <th colspan="5" width="75%">Seminar</th>
+        </tr>
+        <tr>
+            <th colspan="2" width="30%">Schedule</th>
+            <th colspan="2" rowspan="2" width="35%">TOPIC</th>
+        </tr>
+        <tr>
+            <th width="15%">BEGIN</th>
+            <th width="15%">END</th>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2" width="25%"> MONDAY</td>
+            <td rowspan="2">8:00AM</td>
+            <td rowspan="2" style="background-color: darkkhaki;">05:00PM</td>
+            <td>INTRODUCTION TO XML</td>
+            
+        </tr>
+        <tr>
+            <td>VALIDITY:DTD AND RELAX NG</td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="3" width="25%"> TUESDAY</td>
+            <td>8:00AM</td>
+            <td>11:00AM</td>   
+            <td rowspan="3" style="border: 0px;" >
+                <table id="table1">
+                  <tr>
+                    <td>
+                      <p>XPath</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>XSL Transformation</p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+        </tr>
+        <tr>
+            <td>11:00AM</td>
+            <td>2:00PM</td>
+            
+            
+        </tr>
+        <tr>
+            <td>2:00PM</td>
+            <td style="background-color: darkkhaki;">5:00PM</td>
+            
+        </tr>
+      <tr>
+        <td colspan="2">WEDNESDAY</td>
+        <td colspan="1">8:00 AM</td>
+        <td>12:00PM</td>
+        <td>XLS FORMATTING OBJECTS</td>
+      </tr>  
+      <tr>
+        
+      </tr>
+    </table>
+
+</body>
+</html>
