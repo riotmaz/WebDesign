@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        header{
+                text-align: Left;
+                height: 20px;
+                background-color: blueviolet;
+                padding:20px;
+            }
+            nav{
+                text-align: left;
+                border-bottom: 2px solid black;
+                border-top: 2px solid black;
+                height: 20px;
+                padding: 20px;
+                background-color: aqua;
+            }
+            
+            .main-container{
+                display: flex;
+                background-color: rgb(227, 197, 255);
+            }
+            .container {
+            border: 2px solid #333;
+            width: 100%;
+            background: #fff;
+            text-align: left;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            
+        }
+        .header {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: left; /* Header remains centered */
+        }
+        .row {
+            border: 1px solid #999;
+            margin: 10px 0;
+            padding: 20px;
+            font-size: 1rem;
+            background: #f9f9f9;
+            height: 40px;
+        }
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    padding: 5px;
+    
+}
+.box {
+    display: flex;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+
+.small-boxes .box {
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 40px;
+    background-color: white;
+    
+}
+
+.large-box .box {
+    background-color: white;
+    height: 270px;
+}
+
+.footer{
+    background-color: aquamarine;
+    text-align: center;
+    padding:30px;
+    border-bottom: 2px solid black;
+}
+   
+    </style>
+</head>
+<body>
+    <header><strong>My Website Header</strong></header>
+    <nav>
+        <a href="#home" style="padding-right: 10px;">Home1</a>
+        <a href="#home" style="padding-right: 10px;">Home2</a>
+        <a href="#home" style="padding-right: 10px;">Home3</a>
+        <a href="#home" style="padding-right: 10px;">Home4</a>
+        <a href="#home" style="padding-right: 10px;">Home5</a>
+    </nav>
+    <section>
+        <div class="main-container">
+            <!-- Left Column -->
+            <div class="column small-boxes" style="width: 10%;">
+                <div class="box">Home1</div>
+                <div class="box">Home2</div>
+                <div class="box">Home3</div>
+                <div class="box">Home4</div>
+                <div class="box">Home5</div>
+            </div>
+    
+    
+            <!-- Middle Column -->
+            <div class="column large-box" style="width: 80%;">
+                <div class="box">
+                    <div class="container">
+                        <div class="header">Section Heading</div>
+                        <div class="row">HTML<br><br>Hyper Text Markup Language</div>
+                        <div class="row">CSS<br><br>Cascade Style Sheet</div>
+                    </div>
+                </div>
+            </div>
+        
+        
+            <!-- Right Column -->
+            <div class="column small-boxes" style="width: 10%;">
+                <div class="box">Home1</div>
+                <div class="box">Home2</div>
+                <div class="box">Home3</div>
+                <div class="box">Home4</div>
+                <div class="box">Home5</div>
+            </div>
+        </div>
+    </section>
+    <div class="footer"><strong>@copyright2016 All Rights Reserved</strong></div>
+</body>
+</html>
