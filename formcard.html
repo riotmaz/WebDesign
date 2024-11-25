@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Container for the Form */
+.form-container {
+    display: grid;
+    grid-template-columns: 48% 48%; /* Two columns with equal width */
+    gap: 4%; /* Space between columns */
+    width: 100%; /* Take full width of the parent */
+    height: 100%; /* Adjust to fit the parent modal */
+    padding: 2%; /* Padding inside the container */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+}
+
+/* Individual Sections (Left and Right) */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Fit the full height of the container */
+}
+
+/* Form Labels */
+.form-section label {
+    margin-top: 10px;
+    font-size: 90%; /* Adjust font size relative to parent */
+}
+
+/* Input Fields and Radio/Checkbox Layout */
+.form-section input[type="text"],
+.form-section input[type="email"] {
+    width: 100%; /* Full width within the section */
+    padding: 2%; /* Internal padding for input fields */
+    margin-top: 5px;
+    font-size: 90%;
+    border: 1px solid #ccc;
+    
+    box-sizing: border-box;
+}
+
+/* Radio Buttons and Checkboxes */
+.form-section input[type="radio"],
+.form-section input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Button Styling */
+form button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 2%;
+    font-size: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Optional Link Styling */
+.form-section a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.form-section a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <!-- Left Section: Basic Information -->
+        <div class="form-section">
+            <h3>BASIC INFORMATION</h3>
+    
+            <label><strong>Your reason to buy is:</strong></label>
+            <div>
+                <input type="radio" id="investment" name="reason" value="investment" required>
+                <label for="investment">Investment</label>
+                <input type="radio" id="selfuse" name="reason" value="selfuse">
+                <label for="selfuse">Self Use</label>
+            </div>
+    
+            <label><strong>Are you a property dealer?</strong></label>
+            <div>
+                <input type="radio" id="yes" name="dealer" value="yes" required>
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="dealer" value="no">
+                <label for="no">No</label>
+            </div>
+    
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required style="border: 0px; border-bottom: 1px solid gray;">
+    
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+    
+        <!-- Right Section: Optional Information -->
+        <div class="form-section">
+            <h3>Optional Information</h3>
+    
+            <label>By when are you planning to buy the property?</label>
+            <div>
+                <input type="radio" id="3months" name="timeline" value="3months">
+                <label for="3months">3 months</label>
+                <input type="radio" id="6months" name="timeline" value="6months">
+                <label for="6months">6 months</label>
+                <input type="radio" id="more" name="timeline" value="more">
+                <label for="more">More than 6 months</label>
+            </div>
+    
+            <div>
+                <input type="checkbox" id="loan" name="interest" value="loan">
+                <label for="loan">I am interested in home loan</label>
+            </div>
+            <div>
+                <input type="checkbox" id="siteVisit" name="interest" value="siteVisit">
+                <label for="siteVisit">I am interested in site visits</label>
+            </div>
+            <div>
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></label>
+            </div>
+    
+            <button type="submit">View Advertiser Details</button>
+        </div>
+    </div>    
+</body>
+</html>
