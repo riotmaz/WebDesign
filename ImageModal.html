@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Modal</title>
+    <style>
+      /* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.close-modal {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 28px;
+      color: white;
+      background-color: #333;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .close-modal:hover {
+      background-color: #555;
+    }
+
+/* Navigation Bar Styling */
+.navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      background-color: #333;
+      color: white;
+      width: 100%;
+      height: 60px;
+      box-sizing: border-box;
+    }
+
+    .nav-left, .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
+.nav-tab {
+      margin-right: 15px;
+      color: white;
+      text-decoration: none;
+      font-size: x-large;
+      transition: color 0.3s;
+    }
+
+.nav-tab:hover,
+.nav-tab.active {
+    color: #00d8ff;
+}
+.brochure {
+      display: flex;
+      align-items: center;
+      padding-right: 40px;
+    }
+
+/* Main Layout Styling */
+.main-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-display img {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.arrow {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 36px;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    border: none;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.left-arrow {
+    left: 20px;
+}
+
+.right-arrow {
+    right: 20px;
+}
+
+/* Footer Image Grid Styling */
+.image-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    justify-content: center; /* Center the content */
+    align-items: center; /* Align items vertically in the center */
+}
+
+.thumbnail {
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.thumbnail.active {
+    border: 2px solid #00d8ff;
+    filter: brightness(1.2);
+}
+@media (max-width: 768px) {
+      .nav-tab {
+        font-size: medium;
+        margin-right: 10px;
+      }
+
+      .main-layout {
+        flex-direction: column;
+        padding: 5px;
+      }
+
+      .image-display img {
+        max-height: 60vh;
+      }
+
+      .arrow {
+        font-size: 28px;
+        padding: 5px;
+      }
+
+      .image-grid {
+        gap: 5px;
+      }
+
+      .thumbnail {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav-tab {
+        font-size: small;
+        margin-right: 5px;
+      }
+
+      .image-display img {
+        max-height: 50vh;
+      }
+
+      .thumbnail {
+        width: 60px;
+        height: 60px;
+      }
+
+      .arrow {
+        font-size: 24px;
+        padding: 3px;
+      }
+    }
+
+    </style>
+</head>
+<body>
+    <!-- Trigger Button -->
+    <button onclick="openModal()">Open Image Modal</button>
+
+    <!-- Modal -->
+    <div class="modal" id="image-modal">
+        <div class="modal-content">
+            <!-- Navigation Bar -->
+            <header class="navbar">
+                <div class="nav-left">
+                    <a href="#" id="outdoor-tab" class="nav-tab" onclick="navigateToSection('outdoor')">Outdoor <span id="outdoor-count"></span></a>
+                    <a href="#" id="facilities-tab" class="nav-tab" onclick="navigateToSection('facilities')">Facilities <span id="facilities-count"></span></a>
+                    <a href="#" id="others-tab" class="nav-tab" onclick="navigateToSection('others')">Others <span id="others-count"></span></a>
+                </div>
+                <div class="nav-right">
+                    <a href="#" class="nav-tab brochure">Brochure</a>
+                </div>
+            </header>
+
+            <!-- Main Page Layout -->
+            <main class="main-layout">
+                <button class="arrow left-arrow" onclick="previousImage()">&#9664;</button>
+                <div class="image-display">
+                    <img src="../Images/img1.jpg" alt="Main Image" id="main-image">
+                </div>
+                <button class="arrow right-arrow" onclick="nextImage()">&#9654;</button>
+            </main>
+
+            <!-- Footer Image Grid -->
+            <footer class="image-grid" id="image-grid">
+                <img src="../Images/img1.jpg" alt="Thumbnail 1" class="thumbnail" onclick="updateMainImage('../Images/img1.jpg', 0)">
+                <img src="../Images/img2.jpg" alt="Thumbnail 2" class="thumbnail" onclick="updateMainImage('../Images/img2.jpg', 1)">
+                <img src="../Images/img3.jpg" alt="Thumbnail 3" class="thumbnail" onclick="updateMainImage('../Images/img3.jpg', 2)">
+                <img src="../Images/img4.jpg" alt="Thumbnail 4" class="thumbnail" onclick="updateMainImage('../Images/img4.jpg', 3)">
+                <img src="../Images/img5.jpg" alt="Thumbnail 5" class="thumbnail" onclick="updateMainImage('../Images/img5.jpg', 4)">
+                <img src="../Images/img6.jpg" alt="Thumbnail 6" class="thumbnail" onclick="updateMainImage('../Images/img6.jpg', 5)">
+                <img src="../Images/img7.jpg" alt="Thumbnail 7" class="thumbnail" onclick="updateMainImage('../Images/img7.jpg', 6)">
+                <img src="../Images/img8.jpg" alt="Thumbnail 8" class="thumbnail" onclick="updateMainImage('../Images/img8.jpg', 7)">
+                <img src="../Images/img9.jpg" alt="Thumbnail 9" class="thumbnail" onclick="updateMainImage('../Images/img9.jpg', 8)">
+                <img src="../Images/img10.jpg" alt="Thumbnail 10" class="thumbnail" onclick="updateMainImage('../Images/img10.jpg', 9)">
+            </footer>
+
+            <!-- Close Button -->
+            <button class="close-modal" onclick="closeModal()">×</button>
+        </div>
+    </div>
+
+    <script>
+      let currentImageIndex = 0;
+const images = [
+    '../Images/img1.jpg', '../Images/img2.jpg', '../Images/img3.jpg',
+    '../Images/img4.jpg', '../Images/img5.jpg', '../Images/img6.jpg',
+    '../Images/img7.jpg', '../Images/img8.jpg', '../Images/img9.jpg',
+    '../Images/img10.jpg'
+];
+
+// Section ranges
+const sectionRanges = {
+    outdoor: [0, 1, 2, 3],
+    facilities: [4, 5, 6],
+    others: [7, 8, 9]
+};
+
+function openModal() {
+    document.getElementById('image-modal').style.display = 'block';
+    highlightActiveThumbnail();
+    highlightActiveTab();
+}
+
+function closeModal() {
+    document.getElementById('image-modal').style.display = 'none';
+}
+
+function nextImage() {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    displayImage(images[currentImageIndex]);
+}
+
+function previousImage() {
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+    displayImage(images[currentImageIndex]);
+}
+
+function updateMainImage(imageSrc, index) {
+    currentImageIndex = index;
+    displayImage(imageSrc);
+}
+
+function displayImage(imageSrc) {
+    document.getElementById('main-image').src = imageSrc;
+    highlightActiveThumbnail();
+    highlightActiveTab();
+}
+
+function highlightActiveThumbnail() {
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    thumbnails.forEach((thumbnail, index) => {
+        thumbnail.classList.toggle('active', index === currentImageIndex);
+    });
+}
+
+function highlightActiveTab() {
+    const tabs = ['outdoor', 'facilities', 'others'];
+    tabs.forEach(tab => {
+        const tabElement = document.getElementById(`${tab}-tab`);
+        tabElement.classList.toggle('active', sectionRanges[tab].includes(currentImageIndex));
+    });
+}
+
+function navigateToSection(section) {
+    const startIndex = sectionRanges[section][0];
+    currentImageIndex = startIndex;
+    displayImage(images[startIndex]);
+}
+
+// Initialize tab counts
+document.getElementById('outdoor-count').textContent = `(${sectionRanges.outdoor.length})`;
+document.getElementById('facilities-count').textContent = `(${sectionRanges.facilities.length})`;
+document.getElementById('others-count').textContent = `(${sectionRanges.others.length})`;
+
+    </script>
+</body>
+</html>

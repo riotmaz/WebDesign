@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Practice</title>
+</head>
+<body>
+    <h2>Output Section</h2>
+    <div id="output"></div>
+    <div class="message"></div>
+    <div class="message"></div>
+    <div class="message"></div>
+    <p class="info">Original Info Text</p>
+
+    <script>
+        
+        document.write("<p>Q1: Hello, World!</p>");
+
+        
+        console.log("Q2: JavaScript is fun!");
+
+        alert("Q3: Welcome to JavaScript!");
+
+
+
+        let age = 25;
+        console.log("Q4: Age is", age);
+
+    
+        var name = "Alice";
+        name = "Bob";
+        console.log("Q5: Name is", name); 
+
+        let sum = 10 + 20;
+        console.log("Q7: Sum is", sum); 
+
+        
+        console.log("Q8: 10 + '20' is", 10 + "20"); 
+
+        
+        console.log("Q9: 10 == '10' is", 10 == "10"); 
+        console.log("Q9: 10 === '10' is", 10 === "10"); 
+
+    
+        let x = true;
+        console.log("Q11: Type of x is", typeof x); 
+
+        
+        let a = null;
+        console.log("Q12: Type of null is", typeof a); 
+
+        let b = 10, c = 20;
+        let temp = b;
+        b = c;
+        c = temp;
+        console.log(`Q13: After swapping, b: ${b}, c: ${c}`); 
+
+        
+        let num1 = 5;
+        let num2 = "5";
+        console.log("Q14: 5 + '5' is", num1 + num2); 
+        console.log("Q14: 5 - '5' is", num1 - num2); 
+
+        
+        let num = 7;
+        if (num % 2 === 0) {
+            console.log("Q15: Number is Even");
+        } else {
+            console.log("Q15: Number is Odd"); 
+        }
+
+        
+        document.getElementById("output").innerText = "Q16: Hello, JavaScript!";
+
+
+        const messages = document.querySelectorAll(".message");
+        messages.forEach((element, index) => {
+            element.innerText = `Q17: Welcome to JavaScript! Message ${index + 1}`;
+        });
+
+
+        document.querySelector(".info").innerText = "Q18: This is JavaScript!";
+    </script>
+</body>
+</html>
