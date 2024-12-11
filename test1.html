@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+    <div id="in-page-channel-node-id" data-channel-name="in_page_channel_fR94zu"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://lolstatic-a.akamaihd.net/rso-authenticator-ui/0.79.0/rso-authenticator-ui.css">
+    <link rel="shortcut icon" href="https://lolstatic-a.akamaihd.net/rso-authenticator-ui/0.79.0/assets/favicon.ico">
+    <title data-testid="SIGN_IN">Sign in</title>
+    <style>
+        .osano-cm-window{
+            font-family:Helvetica,Arial,Hiragino Sans GB,STXihei,Microsoft YaHei,WenQuanYi Micro Hei,Hind,MS Gothic,Apple SD Gothic Neo,NanumBarunGothic,sans-serif;
+            font-size:16px;font-smooth:always;
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothingz:auto;
+            display:block;left:0;
+            line-height:1;
+            position:absolute;
+            top:0;
+            width:100%;
+            z-index:2147483638;
+            --fade-transition-time:700ms;
+            --slide-transition-time:400ms
+        }
+        .osano-cm-window--context_amp{
+            height:100%
+        }
+        .osano-visually-hidden{
+            height:1px;
+            left:-10000px;
+            margin:-1px;
+            opacity:0;
+            overflow:hidden;
+            position:absolute;
+            width:1px
+        }
+        .osano-cm-button{
+            border-radius:.25em;
+            border-style:solid;
+            border-width:thin;
+            cursor:pointer;
+            flex:1 1 auto;
+            font-size:1em;
+            font-weight:700;
+            line-height:1;
+            margin:.125em;
+            min-width:6em;
+            padding:.5em .75em;
+            transition-duration:.2s;
+            transition-property:background-color;
+            transition-timing-function:ease-out
+        }
+        .osano-cm-button--type_icon{
+            border-radius:50%;
+            height:1em;
+            line-height:0;
+            min-width:1em;
+            width:1em
+        }
+        .osano-cm-button:focus,.osano-cm-button:hover{
+            outline:none
+        }
+        .osano-cm-close{
+            border-radius:50%;
+            border-style:solid;
+            border-width:2px;
+            box-sizing:content-box;
+            cursor:pointer;
+            height:20px;
+            margin:.5em;
+            min-height:20px;
+            min-width:20px;
+            order:0;
+            outline:none;
+            overflow:hidden;
+            padding:0;
+            width:20px;
+            stroke-width:1px;
+            justify-content:center;
+            line-height:normal;
+            text-decoration:none;
+            transform:rotate(0deg);
+            transition-duration:.2s;
+            transition-property:transform,color,background-color,stroke,stroke-width;
+            transition-timing-function:ease-out;
+            z-index:2
+        }
+        .osano-cm-close:focus,.osano-cm-close:hover{
+            transform:rotate(90deg);
+            stroke-width:2px
+        }
+        .ccpa-opt-out-icon{
+            display:flex;
+            flex:1 1 auto
+        }
+        .ccpa-opt-out-icon svg{
+            max-width:40px
+        }
+        .osano-cm-link{
+            cursor:pointer;
+            text-decoration:underline;
+            transition-duration:.2s;
+            transition-property:color;
+            transition-timing-function:ease-out
+        }
+        .osano-cm-link:active,.osano-cm-link:hover{
+            outline:none
+        }
+        .osano-cm-link:focus{
+            font-weight:700;
+            outline:none
+        }
+        .osano-cm-link--type_feature,.osano-cm-link--type_purpose,.osano-cm-link--type_specialFeature,.osano-cm-link--type_specialPurpose{
+            cursor:help;
+            display:block;
+            -webkit-text-decoration:dashed;
+            text-decoration:dashed
+        }
+        .osano-cm-link--type_denyAll{
+            display:block;
+            text-align:right
+        }
+        [dir=rtl] .osano-cm-link--type_denyAll{
+            text-align:left
+        }
+        .osano-cm-link--type_vendor{
+            display:block
+        }
+        .osano-cm-vendor-link{
+            font-size:.75em
+        }
+        .osano-cm-list-item{
+            margin:0
+        }
+        .osano-cm-list-item--type_term{
+            border-top-style:solid;border-top-width:1px;font-size:.875rem;font-weight:400;margin-bottom:.25em;margin-top:.5em;padding:.5em .75rem 0;position:relative;top:-1px}.osano-cm-list-item--type_description{font-size:.75rem;font-weight:lighter;padding:0 .75rem}.osano-cm-list{list-style-position:outside;list-style-type:none;margin:0;padding:0}.osano-cm-list__list-item{text-indent:0}.osano-cm-list--type_description{margin:0 -1em}.osano-cm-list:first-of-type .osano-cm-list__list-item:first-of-type{border-top-width:0;margin-top:0;padding-top:0}.osano-cm-toggle{align-items:center;display:flex;flex-direction:row-reverse;justify-content:flex-start;margin:.25em 0;pointer-events:auto;position:relative}.osano-cm-toggle__label{margin:0 .5em 0 0}[dir=rtl] .osano-cm-toggle__label{margin:0 0 0 .5em}.osano-cm-toggle__switch{border-radius:14px;border-style:solid;border-width:2px;box-sizing:content-box;color:transparent;display:block;flex-shrink:0;height:18px;line-height:0;margin:0;position:relative;text-indent:-9999px;transition-duration:.2s;transition-property:background-color;transition-timing-function:ease-out;width:40px}.osano-cm-toggle__switch:hover{cursor:pointer}.osano-cm-toggle__switch:after{border-radius:9px;border-width:0;height:18px;left:0;top:0;width:18px}.osano-cm-toggle__switch:before{border-radius:16px;border-width:2px;bottom:-6px;box-sizing:border-box;left:-6px;right:-6px;top:-6px}.osano-cm-toggle__switch:after,.osano-cm-toggle__switch:before{border-style:solid;content:"";margin:0;position:absolute;transform:translateX(0);transition-duration:.3s;transition-property:transform,left,border-color;transition-timing-function:ease-out}.osano-cm-toggle__switch:after:active,.osano-cm-toggle__switch:before:active{transition-duration:.1s}.osano-cm-toggle__switch:after:active{width:26px}.osano-cm-toggle__switch:before:active{width:34px}[dir=rtl] .osano-cm-toggle__switch:after{left:100%;transform:translateX(-100%)}.osano-cm-toggle__input{height:1px;left:-10000px;margin:-1px;opacity:0;overflow:hidden;position:absolute;width:1px}[dir=rtl] .osano-cm-toggle__input{left:0;right:-10000px}.osano-cm-toggle__input:disabled{cursor:default}.osano-cm-toggle--type_checkbox .osano-cm-toggle__switch{border-radius:4px;border-style:solid;border-width:1px;height:22px;width:22px}.osano-cm-toggle--type_checkbox .osano-cm-toggle__switch:after{background-color:transparent!important;border-bottom-width:2px;border-left-width:2px;border-radius:0;content:none;height:6px;left:3px;top:3px;transform:rotate(-45deg);transition-property:color;transition-timing-function:ease-out;width:12px}.osano-cm-toggle--type_opt-out .osano-cm-toggle__switch{border-radius:4px;border-style:solid;border-width:1px;height:22px;width:22px}.osano-cm-toggle--type_opt-out .osano-cm-toggle__switch:after,.osano-cm-toggle--type_opt-out .osano-cm-toggle__switch:before{background-color:transparent!important;border-bottom-width:1px;border-radius:0;border-top-width:1px;content:none;height:0;left:-3px;top:7px;transition-property:color;transition-timing-function:ease-out;width:12px}.osano-cm-toggle--type_opt-out .osano-cm-toggle__switch:after{transform:translate(50%,50%) rotate(-45deg)}.osano-cm-toggle--type_opt-out .osano-cm-toggle__switch:before{transform:translate(50%,50%) rotate(45deg)}.osano-cm-toggle__input:checked+.osano-cm-toggle__switch:after{left:100%;transform:translateX(-100%)}[dir=rtl] .osano-cm-toggle__input:checked+.osano-cm-toggle__switch:after{left:0;transform:translateX(0)}.osano-cm-toggle__input:disabled+.osano-cm-toggle__switch{cursor:default}.osano-cm-toggle--type_checkbox .osano-cm-toggle__input:checked+.osano-cm-toggle__switch:after{content:"";left:3px;top:3px;transform:rotate(-45deg)}.osano-cm-toggle--type_opt-out .osano-cm-toggle__input:checked+.osano-cm-toggle__switch:after,.osano-cm-toggle--type_opt-out .osano-cm-toggle__input:checked+.osano-cm-toggle__switch:before{content:"";left:-1px;top:9px}.osano-cm-toggle--type_opt-out .osano-cm-toggle__input:checked+.osano-cm-toggle__switch:after{transform:translate(50%,50%) rotate(-45deg)}.osano-cm-toggle--type_opt-out .osano-cm-toggle__input:checked+.osano-cm-toggle__switch:before{transform:translate(50%,50%) rotate(45deg)}.osano-cm-toggle--type_checkbox .osano-cm-toggle__input:disabled+.osano-cm-toggle__switch,.osano-cm-toggle--type_opt-out .osano-cm-toggle__input:disabled+.osano-cm-toggle__switch{opacity:.3}.osano-cm-widget{background:none;border:none;bottom:12px;cursor:pointer;height:40px;opacity:.9;outline:none;padding:0;position:fixed;transition:transform .1s linear 0s,opacity .2s linear 0ms,visibility 0ms linear 0ms;visibility:visible;width:40px;z-index:2147483636}.osano-cm-widget--position_right{right:12px}.osano-cm-widget--position_left{left:12px}.osano-cm-widget:focus{outline:solid;outline-offset:.2rem}.osano-cm-widget:focus,.osano-cm-widget:hover{opacity:1;transform:scale(1.1)}.osano-cm-widget--hidden{opacity:0;visibility:hidden}.osano-cm-widget--hidden:focus,.osano-cm-widget--hidden:hover{opacity:0;transform:scale(1)}.osano-cm-dialog{align-items:center;box-sizing:border-box;font-size:1em;line-height:1.25;overflow:auto;padding:1.5em;position:fixed;transition-delay:0ms,0ms;transition-duration:.7s,0ms;transition-property:opacity,visibility;visibility:visible;z-index:2147483637}.osano-cm-dialog--hidden{opacity:0;transition-delay:0ms,.7s;visibility:hidden}.osano-cm-dialog--type_bar{box-sizing:border-box;display:flex;flex-direction:column;left:0;right:0}.osano-cm-dialog--type_bar .osano-cm-button{flex:none;margin:.125em auto;width:80%}@media screen and (min-width:768px){.osano-cm-dialog--type_bar{flex-direction:row}.osano-cm-dialog--type_bar .osano-cm-button{flex:1 1 100%;margin:.25em .5em;width:auto}}.osano-cm-dialog--type_box{flex-direction:column;max-height:calc(100vh - 2em);max-width:20em;width:calc(100vw - 2em)}.osano-cm-dialog__close{position:absolute;right:0;top:0}.osano-cm-dialog__list{margin:.5em 0 0;padding:0}.osano-cm-dialog__list .osano-cm-item{display:flex;margin-top:0}.osano-cm-dialog__list .osano-cm-item:last-child{margin-bottom:0}.osano-cm-dialog__list .osano-cm-toggle{flex-direction:row}[dir=rtl] .osano-cm-dialog__list .osano-cm-toggle{flex-direction:row-reverse}.osano-cm-dialog__list .osano-cm-label{white-space:nowrap}[dir=ltr] .osano-cm-dialog__list .osano-cm-label{margin-left:.375em}[dir=rtl] .osano-cm-dialog__list .osano-cm-label{margin-right:.375em}.osano-cm-dialog__buttons{display:flex;flex-wrap:wrap}.osano-cm-dialog--type_bar .osano-cm-dialog__content{flex:5;margin-bottom:.25em;width:100%}.osano-cm-dialog--type_box .osano-cm-dialog__content{display:flex;flex-direction:column;flex-grow:.0001;transition:flex-grow 1s linear}.osano-cm-dialog--type_bar .osano-cm-dialog__list{display:flex;flex-direction:column;flex-wrap:wrap;justify-content:flex-start;margin:.75em auto}@media screen and (min-width:376px){.osano-cm-dialog--type_bar .osano-cm-dialog__list{flex-direction:row}}@media screen and (min-width:768px){.osano-cm-dialog--type_bar .osano-cm-dialog__list{margin:.5em 0 0 auto}[dir=rtl] .osano-cm-dialog--type_bar .osano-cm-dialog__list{margin:.5em auto 0 0}}[dir=ltr] .osano-cm-dialog--type_bar .osano-cm-dialog__list .osano-cm-item{margin-right:.5em}[dir=rtl] .osano-cm-dialog--type_bar .osano-cm-dialog__list .osano-cm-item{margin-left:.5em}.osano-cm-dialog--type_bar .osano-cm-dialog__list .osano-cm-label{padding-top:0}.osano-cm-dialog--type_bar .osano-cm-dialog__buttons{flex:1;justify-content:flex-end;margin:0;width:100%}@media screen and (min-width:768px){.osano-cm-dialog--type_bar .osano-cm-dialog__buttons{margin:0 0 0 .5em;max-width:30vw;min-width:16em;position:sticky;top:0;width:auto}[dir=rtl] .osano-cm-dialog--type_bar .osano-cm-dialog__buttons{margin:0 .5em 0 0}}.osano-cm-dialog--type_box .osano-cm-dialog__buttons{margin:.5em 0 0}.osano-cm-dialog--type_bar.osano-cm-dialog--position_top{top:0}.osano-cm-dialog--type_bar.osano-cm-dialog--position_bottom{bottom:0}.osano-cm-dialog--type_box.osano-cm-dialog--position_top-left{left:1em;top:1em}.osano-cm-dialog--type_box.osano-cm-dialog--position_top-right{right:1em;top:1em}.osano-cm-dialog--type_box.osano-cm-dialog--position_bottom-left{bottom:1em;left:1em}.osano-cm-dialog--type_box.osano-cm-dialog--position_bottom-right{bottom:1em;right:1em}.osano-cm-dialog--type_box.osano-cm-dialog--position_center{left:50%;top:50%;transform:translate(-50%,-50%)}.osano-cm-dialog--type_box.osano-cm-dialog--wide{max-width:50em}@media screen and (max-height:800px)and (max-width:1200px){.osano-cm-dialog--type_box.osano-cm-dialog--wide{max-width:calc(100vw - 4em)}}.osano-cm-dialog--type_box.osano-cm-dialog--wide .osano-cm-dialog__list{display:flex;flex-wrap:wrap}.osano-cm-dialog--context_amp{height:100%;position:relative}.osano-cm-content__message{margin-bottom:1em;word-break:break-word}.osano-cm-drawer-links{margin:.5em 0 0}.osano-cm-drawer-links__link{display:block}.osano-cm-storage-policy{display:inline-block}.osano-cm-usage-list{margin:0 0 .5em}.osano-cm-usage-list__list{list-style-position:inside;list-style-type:disc}:export{fadeTransitionTime:.7s;slideTransitionTime:.4s}.osano-cm-info-dialog{height:100vh;left:0;position:fixed;top:0;transition-delay:0ms,0ms;transition-duration:.2s,0ms;transition-property:opacity,visibility;visibility:visible;width:100vw;z-index:2147483638}.osano-cm-info-dialog--hidden{opacity:0;transition-delay:0ms,.2s;visibility:hidden}.osano-cm-header{margin:0 0 -1em;padding:1em 0;position:sticky;top:0;z-index:1}.osano-cm-info{animation:delay-overflow .4s;bottom:0;box-shadow:0 0 2px 2px #ccc;box-sizing:border-box;max-width:20em;overflow:visible visible;position:fixed;top:0;transition-duration:.4s;transition-property:transform;width:100%}.osano-cm-info--position_left{left:0;transform:translate(-100%)}.osano-cm-info--position_right{right:0;transform:translate(100%)}.osano-cm-info--open{animation:none;overflow:hidden auto;transform:translate(0)}.osano-cm-info--do_not_sell{animation:none;height:-moz-fit-content;height:fit-content;left:50%;position:fixed;right:auto;top:50%;transform:translate(-50%,-50%);transition:none}.osano-cm-info--do_not_sell .osano-cm-close{order:-1}.osano-cm-info--do_not_sell .osano-cm-header{box-sizing:content-box;display:block;flex:none}.osano-cm-info-views{align-items:flex-start;display:flex;flex-direction:row;flex-wrap:nowrap;height:100%;transition-duration:.4s;transition-property:transform;width:100%}[dir=rtl] .osano-cm-info-views{flex-direction:row-reverse}.osano-cm-info-views__view{box-sizing:border-box;flex-shrink:0;width:100%}.osano-cm-info-views--position_0>:not(:first-of-type){max-height:100%;overflow:hidden}.osano-cm-info-views--position_1{transform:translateX(-100%)}.osano-cm-info-views--position_1>:not(:nth-of-type(2)){max-height:100%;overflow:hidden}.osano-cm-info-views--position_2{transform:translateX(-200%)}.osano-cm-info-views--position_2>:not(:nth-of-type(3)){max-height:100%;overflow:hidden}.osano-cm-info--do_not_sell .osano-cm-info-views{height:-moz-fit-content;height:fit-content}.osano-cm-view{height:0;padding:0 .75em 1em;transition-delay:.4s;transition-duration:0ms;transition-property:height,visibility;visibility:hidden;width:100%}.osano-cm-view__button{font-size:.875em;margin:1em 0 0;width:100%}.osano-cm-view--active{height:auto;transition-delay:0ms;visibility:visible}.osano-cm-description{font-size:.75em;font-weight:300;line-height:1.375;margin:1em 0 0}.osano-cm-description:first-child{margin:0}.osano-cm-description:last-of-type{margin-bottom:1em}.osano-cm-drawer-toggle .osano-cm-label{font-size:.875em;line-height:1.375em;margin:0 auto 0 0}[dir=rtl] .osano-cm-drawer-toggle .osano-cm-label{margin:0 0 0 auto}.osano-cm-info-dialog-header{align-items:center;display:flex;flex-direction:row-reverse;left:auto;min-height:3.25em;position:sticky;top:0;width:100%;z-index:1}[dir=rtl] .osano-cm-info-dialog-header{flex-direction:row}.osano-cm-info-dialog-header__header{align-items:center;display:flex;flex:1 1 auto;font-size:1em;justify-content:flex-start;margin:0;order:1;padding:1em .75em}.osano-cm-info-dialog-header__description{font-size:.75em;line-height:1.375}.osano-cm-back,.osano-cm-info-dialog-header__close{position:relative}.osano-cm-back{flex:0 1 auto;margin:0 0 0 .5em;min-width:0;order:2;width:auto;z-index:2}[dir=rtl] .osano-cm-back{margin:0 .5em 0 0}.osano-cm-powered-by{align-items:center;display:flex;flex-direction:column;font-weight:700;justify-content:center;margin:1em 0}.osano-cm-powered-by__link{font-size:.625em;outline:none;text-decoration:none}.osano-cm-powered-by__link:focus,.osano-cm-powered-by__link:hover{text-decoration:underline}@keyframes delay-overflow{0%{overflow:hidden auto}}.osano-cm-drawer-iab-button-container{display:flex;gap:.5em;justify-content:center;margin-bottom:2em}.osano-cm-illustrations__list>.osano-cm-list-item--type_description{padding:.2rem 1rem}.osano-cm-drawer-item.osano-cm-description__list li{padding-top:.75em}.osano-cm-tcf-purpose--label{border-bottom:1px solid rgba(0,0,0,.1);display:block;margin-bottom:.5em;padding:.25em 0 .5em}.osano-cm-link.osano-cm-link--type_purpose{font-weight:400}.osano-cm-tcf-purpose--label input{float:right;margin-right:.5em}.osano-cm-expansion-panel{border-bottom:1px solid rgba(0,0,0,.1);display:block;font-size:.75em;margin:0 -1.5em 1em;padding:1.5em 1.5em 0}.osano-cm-expansion-panel--expanded{border-bottom:none}.osano-cm-expansion-panel--empty,.osano-cm-expansion-panel--empty:not([open]){border-bottom:1px solid rgba(0,0,0,.1);padding-bottom:0}.osano-cm-expansion-panel__body{background-color:rgba(0,0,0,.1);line-height:1.25;list-style:none;margin:0 -1.5em;max-height:0;overflow:hidden;padding:0 1.5em;transition-delay:0ms,0ms,0ms,.3s;transition-duration:.3s,.3s,.3s,0s;transition-property:max-height,padding-top,padding-bottom,visibility;transition-timing-function:ease-out;visibility:hidden}.osano-cm-expansion-panel__toggle{cursor:pointer;display:block;line-height:1.25;margin:0 auto 1em 0;outline:none;position:relative}.osano-cm-expansion-panel__toggle:active,.osano-cm-expansion-panel__toggle:focus,.osano-cm-expansion-panel__toggle:hover{outline:none}[dir=rtl] .osano-cm-expansion-panel__toggle{margin:0 0 1em auto}.osano-cm-expansion-panel--expanded .osano-cm-expansion-panel__body{max-height:none;padding:1.25em 1.5em 1em;transition-delay:0ms,0ms,0ms,0ms;visibility:visible}.osano-cm-cookie-disclosure__title,.osano-cm-script-disclosure__title{border:0;clear:both;display:block;flex:0 1 30%;font-size:1em;font-weight:700;line-height:1.375;margin:0 0 .5em;padding:0}.osano-cm-cookie-disclosure__description,.osano-cm-script-disclosure__description{flex:0 1 70%;font-size:1em;line-height:1.375;margin:0 0 .5em;padding:0}.osano-cm-disclosure{border-bottom:none;display:block;font-size:.75em;margin:0 -1.5em 1em;padding:1.5em 1.5em 0}.osano-cm-disclosure--collapse{border-bottom:1px solid rgba(0,0,0,.1);padding-bottom:1em}.osano-cm-disclosure--empty,.osano-cm-disclosure--empty:not([open]){border-bottom:1px solid rgba(0,0,0,.1);padding-bottom:0}.osano-cm-disclosure__list{background-color:rgba(0,0,0,.1);line-height:1.25;list-style:none;margin:0 -1.5em;padding:1.25em 1.5em 1em}.osano-cm-disclosure__list:empty{border:none;padding:0 1.5em}.osano-cm-disclosure__list:first-of-type{margin-top:1em;padding:1.25em 1.5em 1em}.osano-cm-disclosure__list:first-of-type:empty{padding:1.75em 1.5em .75em}.osano-cm-disclosure__list:not(:first-of-type):not(:empty){border-top:1px solid rgba(0,0,0,.1)}.osano-cm-disclosure__list:empty+.osano-cm-disclosure__list:not(:empty){border:none;padding:0 1.5em}.osano-cm-disclosure__list:not(:empty)~.osano-cm-disclosure__list:empty+.osano-cm-disclosure__list:not(:empty){border-top:1px solid rgba(0,0,0,.1)}.osano-cm-disclosure__list>.osano-cm-list-item{line-height:1.25}.osano-cm-disclosure__list>.osano-cm-list-item:not(:first-of-type){border-top:1px solid rgba(0,0,0,.1);margin:1em -1.25em 0;padding:1em 1.25em 0}.osano-cm-disclosure__toggle{cursor:pointer;display:block;font-weight:700;line-height:1.25;margin:0 auto 0 0;outline:none;position:relative}.osano-cm-disclosure__toggle:focus,.osano-cm-disclosure__toggle:hover{text-decoration:underline}[dir=rtl] .osano-cm-disclosure__toggle{margin:0 0 0 auto}.osano-cm-disclosure--loading .osano-cm-disclosure__list{height:0;line-height:0;max-height:0}.osano-cm-disclosure--loading .osano-cm-disclosure__list>*{display:none}.osano-cm-disclosure--loading .osano-cm-disclosure__list:after{animation-duration:1s;animation-iteration-count:infinite;animation-name:osano-load-scale;animation-timing-function:ease-in-out;border-radius:100%;content:"";display:block;height:1em;position:relative;top:-.125em;transform:translateY(-50%);width:1em}.osano-cm-disclosure--collapse .osano-cm-disclosure__list{display:none}.osano-cm-disclosure--collapse .osano-cm-disclosure__list:after{content:none}.osano-cm-cookie-disclosure,.osano-cm-script-disclosure{display:flex;flex-wrap:wrap;margin:0}.osano-cm-cookie-disclosure__description:last-of-type,.osano-cm-cookie-disclosure__title:last-of-type,.osano-cm-script-disclosure__description:last-of-type,.osano-cm-script-disclosure__title:last-of-type{margin-bottom:0}@keyframes osano-load-scale{0%{transform:translateY(-50%) scale(0)}to{opacity:0;transform:translateY(-50%) scale(1)}}
+        .osano-cm-window { 
+            direction: ltr;
+            text-align: left;
+        }
+        .osano-cm-dialog{
+             background: #141212;
+             color: #fff; 
+        } 
+        .osano-cm-dialog__close{ 
+            color: #fff; 
+            stroke: #fff; 
+        } 
+        .osano-cm-dialog__close:focus{ 
+            background-color: #fff; 
+            border-color: #fff;
+            stroke: #141212;
+        }
+        .osano-cm-dialog__close:hover{
+            stroke: #ebebeb;
+        } 
+        .osano-cm-dialog__close:focus:hover{ 
+            stroke: #282626; 
+        } 
+        .osano-cm-info-dialog{ 
+            background: rgba(0,0,0,0.45); 
+        } 
+        .osano-cm-header, .osano-cm-info-dialog-header{ 
+            background: #fff; 
+            background: linear-gradient( 180deg, #fff 2.5em, rgba(255,255,255,0) 100% ); 
+        } 
+        .osano-cm-info{ 
+            background: #fff; color: #000; } .osano-cm-link-separator::before { content: '|'; padding: 0 0.5em; } .osano-cm-close { display: flex; background-color: transparent; border-color: transparent; } .osano-cm-info-dialog-header__close { color: 
+                #000; stroke:#000; } .osano-cm-info-dialog-header__close:focus { background-color: #000; border-color: #000; stroke: #fff; } .osano-cm-info-dialog-header__close:hover { stroke: #141414; } .osano-cm-info-dialog-header__close:focus:hover { stroke: 
+    </style>
+    <script nonce="" async="" type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-0X9JWXB87B&amp;l=dataLayer&amp;cx=c&amp;gtm=45He4c30v865489718za200"></script>
+    <script nonce="" async="" type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-0X9JWXB87B&amp;l=dataLayer&amp;cx=c&amp;gtm=45He4c30v865489718za200"></script>
+    <script type="application/json" id="config">{"links":{"cant-sign-in":"https://recovery.riotgames.com/{lang-bcp47}","mfa-faq":"https://support-wildrift.riotgames.com/hc/{lang}/articles/4415717099027","parental-consent":"https://parents.riotgames.com","rso-url":"https://auth.riotgames.com","support-pending-forget":"https://support-leagueoflegends.riotgames.com/hc/{lang}/articles/360050328454","support-pending-forget-bacon-client":"https://support-legendsofruneterra.riotgames.com/hc/{lang}/articles/360051089233","support-pending-forget-prod-xsso-playruneterra":"https://support-legendsofruneterra.riotgames.com/hc/{lang}/articles/360051089233","support-pending-forget-prod-xsso-playvalorant":"https://support-valorant.riotgames.com/hc/{lang}/articles/360050328414","support-pending-forget-tftm":"https://support-teamfighttactics.riotgames.com/hc/{lang}/articles/360051089213","support-pending-forget-valorant-client":"https://support-valorant.riotgames.com/hc/{lang}/articles/360050328414","support-pending-forget-vnm-bacon-client":"https://lor.zing.vn/xoataikhoan","support-pending-forget-vnm-valorant-client":"https://valorant.zing.vn/xoataikhoan","support-pending-forget-vnm-wildrift-client":"https://tocchien.zing.vn/xoataikhoan","support-pending-forget-wildrift-client":"https://support-wildrift.riotgames.com/hc/{lang}/articles/360051089253"},"theme":{"map":{"blue-tape-web-prod":"lor","rso-web-client-stage":"lol","play-valorant-web-prod":"valorant","prod-xsso-playruneterra":"arcane2","prod-xsso-playvalorant":"valorant","prod-xsso-valorantesports":"valorant","prod-xsso-leagueoflegends":"arcane2","prod-xsso-lolesports":"arcane2","prod-xsso-riotgames":"arcane2","prod-xsso-arcane":"arcane2","username-disambiguation-prod":"arcane2","parental-consent-prod":"arcane2","accountodactyl-prod":"arcane2","derp-prod":"arcane2"},"enabled":[]},"captcha":{"enabled":true,"mode":"hcaptcha","siteKey":"019f1553-3845-481c-a6f5-5a60ccf6d830"},"sentryDSNUrl":"","datadog":{"applicationId":"952b385c-77d0-47f9-8b13-baa39473b953","clientToken":"pubd2099db2912b264783056a5b256d39ec","sessionSampleRate":5,"trackUserInteractions":true,"trackResources":true,"trackLongTasks":true,"defaultPrivacyLevel":"mask-user-input","allowFallbackToLocalStorage":true},"appEnvironment":"globalriot.aws-apse1-prod.prod.riotsignon.authenticator","showSignUpIntro":true,"gamepassAccountManagementUrl":"https://account.riotgames.com?anchor_link=connected-accounts","hcaptchaFeatureEnabled":true,"riotSignupEnabled":true,"arcane2ThemeEnabled":true,"emailVerificationEnabled":false,"defaultRegion":"NA1","regions":[{"name":"Brazil","urlName":"br","l10n":"REGION_BR","value":"BR1"},{"name":"EU Nordic & East","urlName":"eune","l10n":"REGION_EUNE","value":"EUN1"},{"name":"EU West","urlName":"euw","l10n":"REGION_EUW","value":"EUW1"},{"name":"Japan","urlName":"jp","l10n":"REGION_JP","value":"JP1"},{"name":"Korea","urlName":"kr","l10n":"REGION_KR","value":"KR"},{"name":"Latin America North","urlName":"lan","l10n":"REGION_LAN","value":"LA1"},{"name":"Latin America South","urlName":"las","l10n":"REGION_LAS","value":"LA2"},{"name":"North America","urlName":"na","l10n":"REGION_NA","value":"NA1"},{"name":"Oceania","urlName":"oce","l10n":"REGION_OCE","value":"OC1"},{"name":"Public Beta","urlName":"pbe","l10n":"REGION_PBE","value":"PBE1"},{"name":"Russia","urlName":"ru","l10n":"REGION_RU","value":"RU"},{"name":"Turkey","urlName":"tr","l10n":"REGION_TR","value":"TR1"},{"name":"Taiwan","urlName":"tw","l10n":"REGION_TW2","value":"TW2"},{"name":"Phillipines","urlName":"ph","l10n":"REGION_PH2","value":"PH2"},{"name":"Singapore","urlName":"sg","l10n":"REGION_SG2","value":"SG2"},{"name":"Vietnam","urlName":"vn","l10n":"REGION_VN2","value":"VN2"},{"name":"Thailand","urlName":"th","l10n":"REGION_TH2","value":"TH2"},{"name":"Middle East and North Africa","urlName":"me","l10n":"REGION_ME1","value":"ME1"}],"country":"ind","clientId":"accountodactyl-prod"}</script>4
+    <script type="application/javascript" id="osanoContainer" src="https://cmp.osano.com/16BZ95S4qp9Kl2gUA/c84de61e-21d7-4a4a-9591-3d3a28fb5b1d/osano.js"></script>
+    <script nonce="">
+        var m=window.location.search.match(/display=([^&]*)/)
+        if (!m || m[1]!=='touch'){
+          var e=document.getElementById("osanoContainer");
+          e.setAttribute('src', "https://cmp.osano.com/16BZ95S4qp9Kl2gUA/c84de61e-21d7-4a4a-9591-3d3a28fb5b1d/osano.js");
+        }
+      </script>
+    <script nonce="" type="text/javascript">window.cdn = "https://lolstatic-a.akamaihd.net/rso-authenticator-ui/0.79.0/";</script>
+    <script nonce="">
+        var m=window.location.search.match(/display=([^&]*)/)
+        if (!m || m[1]!=='touch'){ 
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;var n=d.querySelector('[nonce]');
+          n&&j.setAttribute('nonce',n.nonce||n.getAttribute('nonce'));f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer',"GTM-K6RL4LM");
+        }
+      </script>
+    <style>
+        @keyframes slide-in-one-tap {
+          from {
+            transform: translateY(80px);
+          }
+          to {
+            transform: translateY(0px);
+          }
+        }
+        
+        .trust-hide-gracefully {
+          opacity: 0;
+        }
+        
+        .trust-wallet-one-tap .hidden {
+            display: none;
+          }
+        
+        .trust-wallet-one-tap .semibold {
+            font-weight: 500;
+          }
+        
+        .trust-wallet-one-tap .binance-plex {
+            font-family: 'Binance';
+          }
+        
+        .trust-wallet-one-tap .rounded-full {
+            border-radius: 50%;
+          }
+        
+        .trust-wallet-one-tap .flex {
+            display: flex;
+          }
+        
+        .trust-wallet-one-tap .flex-col {
+            flex-direction: column;
+          }
+        
+        .trust-wallet-one-tap .items-center {
+            align-items: center;
+          }
+        
+        .trust-wallet-one-tap .space-between {
+            justify-content: space-between;
+          }
+        
+        .trust-wallet-one-tap .justify-center {
+            justify-content: center;
+          }
+        
+        .trust-wallet-one-tap .w-full {
+            width: 100%;
+          }
+        
+        .trust-wallet-one-tap .box {
+            transition: all 0.5s cubic-bezier(0, 0, 0, 1.43);
+            animation: slide-in-one-tap 0.5s cubic-bezier(0, 0, 0, 1.43);
+            width: 384px;
+            border-radius: 15px;
+            background: #FFF;
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            z-index: 1020;
+          }
+        
+        .trust-wallet-one-tap .header {
+            gap: 15px;
+            border-bottom: 1px solid #E6E6E6;
+            padding: 10px 18px;
+          }
+        
+        .trust-wallet-one-tap .header .left-items {
+              gap: 15px
+            }
+        
+        .trust-wallet-one-tap .header .title {
+              color: #1E2329;
+              font-size: 18px;
+              font-weight: 600;
+              line-height: 28px;
+            }
+        
+        .trust-wallet-one-tap .header .subtitle {
+              color: #474D57;
+              font-size: 14px;
+              line-height: 20px;
+            }
+        
+        .trust-wallet-one-tap .header .close {
+              color: #1E2329;
+              cursor: pointer;
+            }
+        
+        .trust-wallet-one-tap .body {
+            padding: 9px 18px;
+            gap: 10px;
+        
+          }
+        
+        .trust-wallet-one-tap .body .right-items {
+              gap: 10px;
+              width: 100%;
+            }
+        
+        .trust-wallet-one-tap .body .right-items .wallet-title {
+                color: #1E2329;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 20px;
+              }
+        
+        .trust-wallet-one-tap .body .right-items .wallet-subtitle {
+                color: #474D57;
+                font-size: 14px;
+                line-height: 20px;
+              }
+        
+        .trust-wallet-one-tap .connect-indicator {
+            gap: 15px;
+            padding: 8px 0;
+          }
+        
+        .trust-wallet-one-tap .connect-indicator .flow-icon {
+              color: #474D57;
+            }
+        
+        .trust-wallet-one-tap .loading-color {
+            color: #FFF;
+          }
+        
+        .trust-wallet-one-tap .button {
+            border-radius: 50px;
+            outline: 2px solid transparent;
+            outline-offset: 2px;
+            background-color: rgb(5, 0, 255);
+            border-color: rgb(229, 231, 235);
+            cursor: pointer;
+            text-align: center;
+            height: 45px;
+          }
+        
+        .trust-wallet-one-tap .button .button-text {
+              color: #FFF;
+              font-size: 16px;
+              font-weight: 600;
+              line-height: 20px;
+            }
+        
+        .trust-wallet-one-tap .footer {
+            margin: 20px 30px;
+          }
+        
+        .trust-wallet-one-tap .check-icon {
+            color: #FFF;
+          }
+        
+        @font-face {
+          font-family: 'Binance';
+          src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-Regular.otf) format('opentype');
+          font-weight: 400;
+          font-style: normal;
+        }
+        
+        @font-face {
+          font-family: 'Binance';
+          src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-Medium.otf) format('opentype');
+          font-weight: 500;
+          font-style: normal;
+        }
+        
+        @font-face {
+          font-family: 'Binance';
+          src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-SemiBold.otf) format('opentype');
+          font-weight: 600;
+          font-style: normal;
+        }
+        
+        </style>
+</head>
+<body><div data-nosnippet="" class="osano-cm-window" dir="ltr"><!----> <!--?lit$170682632$--><div hidden="" class="osano-visually-hidden"> <span id="osano-cm-aria.newWindow"><!--?lit$170682632$-->Opens in a new window</span> <span id="osano-cm-aria.external"><!--?lit$170682632$-->Opens an external website</span> <span id="osano-cm-aria.externalNewWindow"><!--?lit$170682632$-->Opens an external website in a new window</span> </div> <!--?lit$170682632$--> <div role="dialog" id="83d6437a-533e-4d56-b493-9e4d7bacfebf" aria-label="Cookie Consent Banner" aria-describedby="83d6437a-533e-4d56-b493-9e4d7bacfebf__label" class=" osano-cm-window__dialog osano-cm-dialog osano-cm-dialog--hidden osano-cm-dialog--position_bottom osano-cm-dialog--type_bar "> <!--?lit$170682632$--> <button class=" osano-cm-dialog__close osano-cm-close "> <!--?lit$170682632$--><svg width="20px" height="20px" viewBox="0 0 20 20" role="img" aria-labelledby="e7a6c6bc-038f-49aa-be00-e8d0441c9422"> <title id="e7a6c6bc-038f-49aa-be00-e8d0441c9422"><!---->Close this dialog<!----></title> <line role="presentation" x1="2" y1="2" x2="18" y2="18"></line> <line role="presentation" x1="2" y1="18" x2="18" y2="2"></line> </svg> </button>  <div class=" osano-cm-dialog__content osano-cm-content "> <!--?lit$170682632$--> <span id="83d6437a-533e-4d56-b493-9e4d7bacfebf__label" class=" osano-cm-content__message osano-cm-message "> <!--?lit$170682632$-->This website utilizes technologies such as cookies to enable essential site functionality, as well as for analytics, personalization, and targeted advertising. <!--?lit$170682632$-->To learn more, view the following link: <!--?lit$170682632$--> </span>  <!--?lit$170682632$--> <!--?lit$170682632$--><!--?lit$170682632$--><a rel="noopener" tabindex="0" href="https://www.riotgames.com/en/privacy-notice" target="_blank" class=" osano-cm-storage-policy osano-cm-content__link osano-cm-link " aria-describedby="osano-cm-aria.newWindow"><!--?lit$170682632$-->Privacy Notice</a><!--?--><!--?lit$170682632$--> <!--?lit$170682632$--> <!--?lit$170682632$--> </div> <!--?lit$170682632$--><div class=" osano-cm-dialog__buttons osano-cm-buttons osano-cm-buttons--disabled "> <!--?lit$170682632$--><!--?lit$170682632$--><button class=" osano-cm-manage osano-cm-buttons__button osano-cm-button osano-cm-button--type_manage " tabindex="0"> <!--?lit$170682632$-->Manage Preferences </button><!--?--> </div> </div>  <!--?lit$170682632$--> <button id="340bc17d-f524-44ff-99f7-95abdf69df16" class="osano-cm-window__widget osano-cm-widget osano-cm-widget--position_right" title="Cookie Preferences" aria-label="Cookie Preferences"> <svg role="img" width="40" height="40" viewBox="0 0 71.85 72.23" xmlns="http://www.w3.org/2000/svg" aria-labelledby="340bc17d-f524-44ff-99f7-95abdf69df16"> <path d="m67.6 36.73a6.26 6.26 0 0 1 -3.2-2.8 5.86 5.86 0 0 0 -5.2-3.1h-.3a11 11 0 0 1 -11.4-9.5 6 6 0 0 1 -.1-1.4 9.2 9.2 0 0 1 .4-2.9 8.65 8.65 0 0 0 .2-1.6 5.38 5.38 0 0 0 -1.9-4.3 7.3 7.3 0 0 1 -2.5-5.5 3.91 3.91 0 0 0 -3.5-3.9 36.46 36.46 0 0 0 -15 1.5 33.14 33.14 0 0 0 -22.1 22.7 35.62 35.62 0 0 0 -1.5 10.2 34.07 34.07 0 0 0 4.8 17.6.75.75 0 0 0 .07.12c.11.17 1.22 1.39 2.68 3-.36.47 5.18 6.16 5.65 6.52a34.62 34.62 0 0 0 55.6-21.9 4.38 4.38 0 0 0 -2.7-4.74z" stroke-width="3" class=" osano-cm-widget__outline osano-cm-outline "></path> <path d="m68 41.13a32.37 32.37 0 0 1 -52 20.5l-2-1.56c-2.5-3.28-5.62-7.15-5.81-7.44a32 32 0 0 1 -4.5-16.5 34.3 34.3 0 0 1 1.4-9.6 30.56 30.56 0 0 1 20.61-21.13 33.51 33.51 0 0 1 14.1-1.4 1.83 1.83 0 0 1 1.6 1.8 9.38 9.38 0 0 0 3.3 7.1 3.36 3.36 0 0 1 1.2 2.6 3.37 3.37 0 0 1 -.1 1 12.66 12.66 0 0 0 -.5 3.4 9.65 9.65 0 0 0 .1 1.7 13 13 0 0 0 10.5 11.2 16.05 16.05 0 0 0 3.1.2 3.84 3.84 0 0 1 3.5 2 10 10 0 0 0 4.1 3.83 2 2 0 0 1 1.4 2z" stroke-width="3" class=" osano-cm-widget__outline osano-cm-outline "></path> <g class=" osano-cm-widget__dot osano-cm-dot "> <path d="m26.6 31.43a5.4 5.4 0 1 1 5.4-5.43 5.38 5.38 0 0 1 -5.33 5.43z"></path> <path d="m25.2 53.13a5.4 5.4 0 1 1 5.4-5.4 5.44 5.44 0 0 1 -5.4 5.4z"></path> <path d="m47.9 52.33a5.4 5.4 0 1 1 5.4-5.4 5.32 5.32 0 0 1 -5.24 5.4z"></path> </g> </svg> </button>  <!--?lit$170682632$--><div role="dialog" aria-modal="true" id="53efc452-5555-4f0a-b36d-0abef6782e0c" aria-labelledby="53efc452-5555-4f0a-b36d-0abef6782e0c__label" aria-hidden="true" class=" osano-cm-window__info-dialog osano-cm-info-dialog osano-cm-info-dialog--hidden "> <!--?lit$170682632$--><!--?lit$170682632$--><span tabindex="0" aria-hidden="true" data-focus="first"></span><!--?--> <div role="presentation" class=" osano-cm-info-dialog__info osano-cm-info osano-cm-info--position_right "> <!--?lit$170682632$--><div role="presentation" class=" osano-cm-info__info-dialog-header osano-cm-info-dialog-header "> <p role="heading" aria-level="1" id="53efc452-5555-4f0a-b36d-0abef6782e0c__label" class=" osano-cm-info-dialog-header__header osano-cm-header "> <!--?lit$170682632$--> </p> <!--?lit$170682632$--> <button class=" osano-cm-info-dialog-header__close osano-cm-close "> <!--?lit$170682632$--><svg width="20px" height="20px" viewBox="0 0 20 20" role="img" aria-labelledby="41727343-c9e8-402c-98cc-0eb0feb8dfff"> <title id="41727343-c9e8-402c-98cc-0eb0feb8dfff"><!---->Close Cookie Preferences<!----></title> <line role="presentation" x1="2" y1="2" x2="18" y2="18"></line> <line role="presentation" x1="2" y1="18" x2="18" y2="2"></line> </svg> </button> <!--?lit$170682632$--> </div> <div role="presentation" class=" osano-cm-info__info-views osano-cm-info-views osano-cm-info-views--hidden osano-cm-info-views--position_0 "> <!--?lit$170682632$--> </div> </div> <!--?lit$170682632$--><!--?lit$170682632$--><span tabindex="0" aria-hidden="true" data-focus="last"></span><!--?--> </div> </div>
+  <div id="root"><div class="sc-kGTyPW cqMIWy"><div class="sc-bbpGSz eXmTnU page-background theme-arcane2"></div><header class="sc-cmEail bpznxM"><div class="sc-eZYOHW kOnnWm"><div class="sc-gHyekI eNBNSw arcane2-riot-logo"></div></div></header><main class="sc-jPYHJC djRBHH"><div class="sc-hneQBV ePsPLG"><form data-testid="auth" data-gtm-form-interact-id="0"><div class="sc-hNeXkk hesEkB main-background theme-arcane2"><h5 class="sc-kFuwaP iNZiaL sc-dskThN foiLEz" color="black" dir="ltr">Sign in</h5><div class="sc-jTsRVL dqaazR"><div class="sc-bjMMwb htfqug"><div><iframe aria-hidden="true" data-hcaptcha-widget-id="0m0w6r2yru0d" data-hcaptcha-response="" src="https://newassets.hcaptcha.com/captcha/v1/05c78a4/static/hcaptcha.html#frame=checkbox-invisible" style="display: none;"></iframe><textarea id="g-recaptcha-response-0m0w6r2yru0d" name="g-recaptcha-response" style="display: none;"></textarea><textarea id="h-captcha-response-0m0w6r2yru0d" name="h-captcha-response" style="display: none;"></textarea></div><div class="sc-fmSAUk bqhmtH sc-eIrltS cwPKYC auth-textfield"><div class="sc-ktEKTO hPWrsi field"><input name="username" data-testid="input-username" autocapitalize="off" type="text" value="RIKESH1RIO" data-gtm-form-interact-field-id="0"><label>Username</label><span dir="ltr">Username</span></div></div><div class="sc-fmSAUk bqhmtH sc-hAYhfR jtCnjz auth-textfield"><div class="sc-ktEKTO hPWrsi field"><input name="password" data-testid="input-password" type="password" autocomplete="off" value="6381878968@Mr" data-gtm-form-interact-field-id="1"><button type="button" tabindex="-1" class="sc-cjERFW fJPWit"><svg size="20" role="img" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg" aria-label="visibilityOff" class="sc-hLseeU eHquvc"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.34 1.44585C14.3045 1.16392 13.1889 1 12 1C4.57143 1 3.38954e-07 7.4 4.23693e-07 9C4.65958e-07 9.79804 1.13727 11.7902 3.19908 13.5868L6.90914 9.87672C6.8749 9.63703 6.85718 9.39201 6.85718 9.14286C6.85718 6.30254 9.15971 4 12 4C12.2492 4 12.4942 4.01772 12.7339 4.05196L15.34 1.44585ZM7.67996 11.9343C8.5962 13.3494 10.1888 14.2857 12 14.2857C14.8404 14.2857 17.1429 11.9832 17.1429 9.14286C17.1429 7.33159 16.2065 5.73902 14.7915 4.82279L17.4109 2.20336C21.5841 4.13703 24 7.83686 24 9C24 10.6 19.4286 17 12 17C9.14983 17 6.72026 16.0579 4.8081 14.8062L7.67996 11.9343Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M3.30716 16.3072L18.7072 0.907164L18.693 0.892959L19.293 0.292969L20.7072 1.70718L16.8397 5.57464C17.0338 5.96031 17.1431 6.39599 17.1431 6.85719C17.1431 8.43514 15.8639 9.71433 14.2859 9.71433C13.8247 9.71433 13.389 9.60506 13.0034 9.41098L4.70717 17.7072L3.30716 16.3072Z"></path></svg></button><label>Password</label><span dir="ltr">Password</span></div></div><div class="sc-bYOEQd jvJGGh"><div class="social-button-group"><button data-testid="facebook" class="sc-eDDNvR dwPrrE"><div class="sc-gLDzan gohLCB"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="facebook" class="sc-hLseeU idnFbI sc-iAEyYk jPWCSn"><title id="social">facebook</title><path d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4687H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9705 4.6875 17.3438 4.92187 17.3438 4.92187V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.74906V12H17.2031L16.6711 15.4687H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z" fill="white"></path></svg></div></button></div><div class="social-button-group"><button data-testid="google" class="sc-eDDNvR lnHqeP"><div class="sc-gLDzan gohLCB"><svg role="img" viewBox="10 10 28 28" xmlns="http://www.w3.org/2000/svg" aria-label="google" class="sc-hLseeU idnFbI sc-iAEyYk jPWCSn"><title id="social">google</title><path d="M35.9999 24.2741C35.9999 23.4584 35.9324 22.6384 35.7884 21.8359H24.2417V26.4565H30.854C30.5796 27.9467 29.6979 29.2649 28.407 30.1026V33.1007H32.3519C34.6684 31.0108 35.9999 27.9246 35.9999 24.2741Z" fill="#4285F4"></path><path d="M24.2417 35.9984C27.5434 35.9984 30.3277 34.9359 32.3564 33.1018L28.4115 30.1037C27.314 30.8356 25.8971 31.25 24.2462 31.25C21.0526 31.25 18.3447 29.1382 17.3731 26.2988H13.3022V29.3895C15.3804 33.4412 19.6131 35.9984 24.2417 35.9984Z" fill="#34A853"></path><path d="M17.3685 26.298C16.8557 24.8078 16.8557 23.1941 17.3685 21.7039V18.6133H13.3022C11.5659 22.0037 11.5659 25.9982 13.3022 29.3886L17.3685 26.298Z" fill="#FBBC04"></path><path d="M24.2417 16.7492C25.987 16.7227 27.6738 17.3664 28.9378 18.548L32.4329 15.1223C30.2198 13.0854 27.2825 11.9655 24.2417 12.0008C19.6131 12.0008 15.3804 14.558 13.3022 18.6142L17.3686 21.7048C18.3357 18.8611 21.0481 16.7492 24.2417 16.7492Z" fill="#EA4335"></path></svg></div></button></div><div class="social-button-group"><button data-testid="apple" class="sc-eDDNvR NpMYh"><div class="sc-gLDzan gohLCB"><svg role="img" viewBox="0 0 24 32" xmlns="http://www.w3.org/2000/svg" aria-label="apple" class="sc-hLseeU idnFbI sc-iAEyYk PHZmD"><title id="social">apple</title><path d="M23.25 20.765C23.25 20.8551 22.7096 22.7465 21.3586 24.7279C20.1877 26.4392 19.0169 28.0604 17.1255 28.1505C15.2341 28.1505 14.6937 27.0697 12.5321 27.0697C10.3705 27.0697 9.74001 28.1505 8.02874 28.2405C6.22741 28.3306 4.78634 26.4392 3.70554 24.7279C1.27375 21.2153 -0.527587 14.9107 1.90421 10.6775C3.07508 8.606 5.23668 7.255 7.57841 7.255C9.37974 7.255 11.091 8.42586 12.1718 8.42586C13.2526 8.42586 15.3241 6.9848 17.4857 7.16493C18.3864 7.16493 20.9083 7.5252 22.5295 9.86693C22.4394 9.957 19.4672 11.6683 19.5573 15.0908C19.5573 19.3239 23.1599 20.765 23.25 20.765ZM16.0447 4.91326C17.0354 3.7424 17.6659 2.1212 17.4857 0.5C16.1347 0.590067 14.4235 1.40067 13.4327 2.57153C12.5321 3.56227 11.7215 5.27353 11.9917 6.80466C13.5228 6.9848 15.0539 6.08413 16.0447 4.91326Z" fill="white"></path></svg></div></button></div><div class="social-button-group"><button data-testid="xbox" class="sc-eDDNvR kastMd"><div class="sc-gLDzan gohLCB"><svg role="img" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" aria-label="xbox" class="sc-hLseeU idnFbI sc-iAEyYk jPWCSn"><title id="social">xbox</title><path d="M9.93695 21.6234C8.29366 21.4662 6.62994 20.8763 5.20074 19.9444C4.00311 19.1634 3.73266 18.8424 3.73266 18.2017C3.73266 16.9148 5.14843 14.6608 7.57072 12.0912C8.94642 10.6319 10.8627 8.92132 11.0699 8.96764C11.4727 9.05767 14.6936 12.1977 15.8993 13.6758C17.806 16.0132 18.6826 17.9271 18.2373 18.7803C17.8988 19.4289 15.7983 20.6966 14.2551 21.1836C12.9833 21.585 11.3129 21.7552 9.93695 21.6234ZM2.11512 16.8637C1.11992 15.3377 0.617109 13.8355 0.37435 11.6627C0.29419 10.9452 0.322915 10.5348 0.556372 9.06223C0.847342 7.22683 1.89314 5.10352 3.14977 3.79678C3.68498 3.24024 3.73278 3.22668 4.38516 3.44633C5.1774 3.71307 6.02345 4.29706 7.33555 5.48286L8.1011 6.17471L7.68305 6.68801C5.74247 9.07072 3.6939 12.4481 2.92186 14.5377C2.50215 15.6736 2.33286 16.8139 2.51345 17.2886C2.63538 17.6091 2.52339 17.4897 2.11512 16.8637ZM19.584 17.1232C19.6823 16.6435 19.558 15.7626 19.2666 14.874C18.6354 12.9498 16.5258 9.37002 14.5886 6.93613L13.9788 6.16995L14.6385 5.56448C15.5 4.77392 16.0981 4.30055 16.7434 3.89855C17.2526 3.58132 17.9804 3.30049 18.2932 3.30049C18.486 3.30049 19.165 4.00471 19.7131 4.77324C20.562 5.96354 21.1865 7.40644 21.5029 8.90851C21.7073 9.87904 21.7244 11.9565 21.5358 12.9247C21.3811 13.7192 21.0544 14.7498 20.7357 15.4488C20.4969 15.9725 19.903 16.9896 19.6427 17.3206C19.5089 17.4908 19.5088 17.4904 19.584 17.1232ZM10.1129 2.93713C9.21907 2.48348 7.84018 1.99652 7.07848 1.86551C6.81145 1.81958 6.35593 1.79396 6.06622 1.80859C5.43776 1.8403 5.46583 1.80746 6.47401 1.3314C7.31219 0.935622 8.01134 0.702884 8.96046 0.503706C10.0281 0.279644 12.035 0.277015 13.0857 0.4983C14.2205 0.737308 15.5568 1.23432 16.3098 1.69745L16.5336 1.8351L16.0201 1.80918C14.9998 1.75769 13.5128 2.16968 11.9162 2.94621C11.4347 3.18043 11.0157 3.3675 10.9853 3.36191C10.9548 3.35633 10.5622 3.16518 10.1129 2.93713Z" fill="white"></path></svg></div></button><button data-testid="playstation" class="sc-eDDNvR bvafGs"><div class="sc-gLDzan gohLCB"><svg role="img" viewBox="0 0 25 19" xmlns="http://www.w3.org/2000/svg" aria-label="playstation" class="sc-hLseeU idnFbI sc-iAEyYk jPWCSn"><title id="social">playstation</title><path d="M9.37418 0V17.0614L13.2844 18.2883V3.97592C13.2844 3.30712 13.5881 2.85971 14.0786 3.01192C14.714 3.18719 14.8401 3.80526 14.8401 4.47406V10.1889C17.2788 11.3512 19.1942 10.1889 19.1942 7.1216C19.1942 3.97592 18.073 2.57835 14.7607 1.45753C13.4573 1.02396 11.0373 0.304421 9.37418 0Z" fill="white"></path><path d="M14.0272 15.793L20.3154 13.5837C21.0301 13.33 21.1376 12.9748 20.5583 12.7857C19.979 12.5966 18.9325 12.652 18.2177 12.9057L14.0272 14.3632V12.0385L14.2701 11.9555C14.2701 11.9555 15.4801 11.5358 17.1806 11.3467C18.8858 11.1622 20.9694 11.3743 22.6045 11.9832C24.4498 12.5597 24.6554 13.4038 24.1882 13.9896C23.7211 14.5754 22.5718 14.9905 22.5718 14.9905L14.0272 18.0209V15.793Z" fill="white"></path><path d="M2.20319 15.5578C0.311138 15.0319 -0.0065405 13.9342 0.857732 13.3023C1.6566 12.7165 3.01608 12.2783 3.01608 12.2783L8.62217 10.3134V12.5551L4.59045 13.9803C3.87568 14.234 3.76823 14.5891 4.34752 14.7782C4.92682 14.9627 5.97796 14.912 6.69274 14.6583L8.62684 13.9665V15.9729C8.50538 15.9959 8.3699 16.0144 8.23909 16.0374C6.29564 16.3465 4.2354 16.2173 2.20319 15.5578Z" fill="white"></path></svg></div></button></div></div><div class="sc-yJYNr fMxuSr"><div class="sc-blLsxD fqLeZU"><div class="sc-fmSAUk ciAvRc CheckboxField"><div class="sc-ktEKTO fwzAfx field"><input id="rememberme" type="checkbox"><svg role="img" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg" aria-label="checkmark" class="sc-hLseeU eHCXYC sc-fGFwAa iUwPLm"><path d="M1.84791 10.5854L8.17372 16.5999L17.2764 5.99613" stroke-linejoin="round"></path></svg><label></label><span dir="ltr"></span></div></div><h6 class="sc-kFuwaP kPTutl sc-ieZDjg NpgsY" color="black" dir="ltr"><label for="rememberme">Stay signed in</label></h6></div></div></div><div class="sc-jOQpHc bgZmaN"><button data-testid="btn-signin-submit" class="sc-eDDNvR dkZMmD"><div class="sc-gLDzan gohLCB"><svg role="img" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-label="forward" class="sc-hLseeU idnFbI sc-iAEyYk cqQCnz"><path d="M22.8011 14.75L14.2234 6.70971L16.0474 5L26.8695 15.1441C27.3732 15.6163 27.3732 16.3817 26.8695 16.8538L16.0474 26.998L14.2234 25.2883L22.7989 17.25H4.75V14.75H22.8011Z"></path></svg></div></button></div><div class="sc-kZCGdI kXlttL"><span color="black" class="sc-kFuwaP dYvDdY" dir="ltr"><a href="https://recovery.riotgames.com/en" class="sc-qRumB koErrF">Can't sign in?</a></span><span color="black" class="sc-kFuwaP dYvDdY" dir="ltr"><a href="https://auth.riotgames.com/authorize?acr_values=urn%3Ariot%3Agold&amp;client_id=accountodactyl-prod&amp;prompt=signup&amp;redirect_uri=https%3A%2F%2Faccount.riotgames.com%2Foauth2%2Flog-in&amp;response_type=code&amp;scope=openid%20email%20profile%20riot%3A%2F%2Friot.atlas%2Faccounts.edit%20riot%3A%2F%2Friot.atlas%2Faccounts%2Fpassword.edit%20riot%3A%2F%2Friot.atlas%2Faccounts%2Femail.edit%20riot%3A%2F%2Friot.atlas%2Faccounts.auth%20riot%3A%2F%2Fthird_party.revoke%20riot%3A%2F%2Fthird_party.query%20riot%3A%2F%2Fforgetme%2Fnotify.write%20riot%3A%2F%2Friot.authenticator%2Fauth.code%20riot%3A%2F%2Friot.authenticator%2Fauthz.edit%20riot%3A%2F%2Frso%2Fmfa%2Fdevice.write%20riot%3A%2F%2Friot.authenticator%2Fidentity.add&amp;state=841883a5-2ff3-4b84-b23a-bf31cc9e37e8&amp;ui_locales=en-US" class="sc-qRumB koErrF">Create account</a></span></div></div></div></form></div></main><footer class="sc-jsMahE sc-dxroEu fUpQQQ dStZvf"><div class="sc-fbJfA fqA-dPY"><span color="gray-068" class="sc-kFuwaP eIokoZ" dir="ltr"><a target="_blank" href="https://support.riotgames.com/hc/en-us" class="sc-qRumB gizEUL sc-jJgynQ hehyQY">Support</a></span><span color="gray-068" class="sc-kFuwaP eIokoZ" dir="ltr"><a target="_blank" href="https://www.riotgames.com/en/privacy-notice" class="sc-qRumB gizEUL sc-jJgynQ hehyQY">Privacy Notice</a></span><span color="gray-068" class="sc-kFuwaP eIokoZ" dir="ltr"><a target="_blank" href="https://www.riotgames.com/en/terms-of-service" class="sc-qRumB gizEUL sc-jJgynQ hehyQY">Terms of Service</a></span><span color="gray-068" class="sc-kFuwaP eIokoZ" dir="ltr"><a href="#" class="sc-qRumB gizEUL sc-jJgynQ hehyQY">Cookie Preferences</a></span><span class="sc-brKeYL gWxDnB" dir="ltr"><span color="gray-068" class="sc-kFuwaP eIokoZ" dir="ltr"><span class="sc-jfSnVq kmktCz" dir="ltr"><select data-testid="language-selector" class="sc-hIqOWS lgbhGD sc-hjsqBZ dZKidH"><option value="en" lang="en" variant="form" class="sc-ejdXBC hgWnvc">English</option><option value="cs" lang="cs" variant="form" class="sc-ejdXBC hgWnvc">Čeština</option><option value="de" lang="de" variant="form" class="sc-ejdXBC hgWnvc">Deutsch</option><option value="el" lang="el" variant="form" class="sc-ejdXBC hgWnvc">ελληνικά</option><option value="es" lang="es" variant="form" class="sc-ejdXBC hgWnvc">Español</option><option value="ES-MX" lang="ES-MX" variant="form" class="sc-ejdXBC hgWnvc">Español (Latinoamérica)</option><option value="fr" lang="fr" variant="form" class="sc-ejdXBC hgWnvc">Français</option><option value="hu" lang="hu" variant="form" class="sc-ejdXBC hgWnvc">Magyar</option><option value="id" lang="id" variant="form" class="sc-ejdXBC hgWnvc">Bahasa Indonesia</option><option value="it" lang="it" variant="form" class="sc-ejdXBC hgWnvc">Italiano</option><option value="ms" lang="ms" variant="form" class="sc-ejdXBC hgWnvc">Bahasa Melayu</option><option value="pl" lang="pl" variant="form" class="sc-ejdXBC hgWnvc">Polski</option><option value="pt-BR" lang="pt-BR" variant="form" class="sc-ejdXBC hgWnvc">Português do Brasil</option><option value="ro" lang="ro" variant="form" class="sc-ejdXBC hgWnvc">Română</option><option value="ru" lang="ru" variant="form" class="sc-ejdXBC hgWnvc">Русский</option><option value="th" lang="th" variant="form" class="sc-ejdXBC hgWnvc">ภาษาไทย</option><option value="tr" lang="tr" variant="form" class="sc-ejdXBC hgWnvc">Türkçe</option><option value="vi" lang="vi" variant="form" class="sc-ejdXBC hgWnvc">Tiếng Việt</option><option value="ja" lang="ja" variant="form" class="sc-ejdXBC hgWnvc">日本語</option><option value="ko" lang="ko" variant="form" class="sc-ejdXBC hgWnvc">한국어</option><option value="ZH-MY" lang="ZH-MY" variant="form" class="sc-ejdXBC hgWnvc">中文(简体)</option><option value="ZH-TW" lang="ZH-TW" variant="form" class="sc-ejdXBC hgWnvc">中文(繁體)</option><option value="ar" lang="ar" variant="form" class="sc-ejdXBC hgWnvc">العربية</option></select><span class="sc-eKYjST kAhjWZ" dir="ltr"><span class="sc-oQLfA gzAcBg" dir="ltr">en</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.994 0C2.682 0 0 2.688 0 6C0 9.312 2.682 12 5.994 12C9.312 12 12 9.312 12 6C12 2.688 9.312 0 5.994 0ZM10.152 3.6H8.382C8.19 2.85 7.914 2.13 7.554 1.464C8.658 1.842 9.576 2.61 10.152 3.6ZM6 1.224C6.498 1.944 6.888 2.742 7.146 3.6H4.854C5.112 2.742 5.502 1.944 6 1.224ZM1.356 7.2C1.26 6.816 1.2 6.414 1.2 6C1.2 5.586 1.26 5.184 1.356 4.8H3.384C3.336 5.196 3.3 5.592 3.3 6C3.3 6.408 3.336 6.804 3.384 7.2H1.356ZM1.848 8.4H3.618C3.81 9.15 4.086 9.87 4.446 10.536C3.342 10.158 2.424 9.396 1.848 8.4ZM3.618 3.6H1.848C2.424 2.604 3.342 1.842 4.446 1.464C4.086 2.13 3.81 2.85 3.618 3.6ZM6 10.776C5.502 10.056 5.112 9.258 4.854 8.4H7.146C6.888 9.258 6.498 10.056 6 10.776ZM7.404 7.2H4.596C4.542 6.804 4.5 6.408 4.5 6C4.5 5.592 4.542 5.19 4.596 4.8H7.404C7.458 5.19 7.5 5.592 7.5 6C7.5 6.408 7.458 6.804 7.404 7.2ZM7.554 10.536C7.914 9.87 8.19 9.15 8.382 8.4H10.152C9.576 9.39 8.658 10.158 7.554 10.536ZM8.616 7.2C8.664 6.804 8.7 6.408 8.7 6C8.7 5.592 8.664 5.196 8.616 4.8H10.644C10.74 5.184 10.8 5.586 10.8 6C10.8 6.414 10.74 6.816 10.644 7.2H8.616Z" fill="#ADADAD"></path></svg></span></span></span></span></div><div class="sc-csCMJt beqGDE"><span class="sc-irTswW bPqtGe"><span class="sc-kFuwaP fgnanf sc-UxxwN jaxXpZ" color="light.text-tertiary"><div data-testid="hcaptcha-legal">This site is protected by hCaptcha and its <a href="https://hcaptcha.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="https://hcaptcha.com/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a> apply.</div></span></span></div></footer></div></div>
+  <script type="text/javascript" src="https://lolstatic-a.akamaihd.net/rso-authenticator-ui/0.79.0/rso-authenticator-ui.js" async=""></script>
+
+<iframe name="__uspapiLocator" style="display: none;"></iframe><div aria-hidden="true" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(215, 215, 215); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 4px; border-radius: 4px; left: auto; top: -10000px; z-index: -2147483648; position: absolute; pointer-events: auto; transition: opacity 0.15s ease-out; opacity: 0; visibility: hidden;"><div style="position: relative; z-index: 1;"><iframe src="https://newassets.hcaptcha.com/captcha/v1/05c78a4/static/hcaptcha.html#frame=challenge&amp;id=0m0w6r2yru0d&amp;host=authenticate.riotgames.com&amp;sentry=true&amp;reportapi=https%3A%2F%2Faccounts.hcaptcha.com&amp;recaptchacompat=true&amp;custom=false&amp;hl=en&amp;tplinks=on&amp;pstissuer=https%3A%2F%2Fpst-issuer.hcaptcha.com&amp;sitekey=019f1553-3845-481c-a6f5-5a60ccf6d830&amp;size=invisible&amp;theme=light&amp;origin=https%3A%2F%2Fauthenticate.riotgames.com" frameborder="0" scrolling="no" allow="private-state-token-issuance 'src'; private-state-token-redemption 'src'" title="Main content of the hCaptcha challenge" style="border: 0px; z-index: 2000000000; position: relative;"></iframe></div><div style="width: 100%; height: 100%; position: fixed; pointer-events: none; top: 0px; left: 0px; z-index: 0; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div style="border-width: 11px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 1; right: 100%;"><div style="border-width: 10px; border-style: solid; border-color: transparent rgb(255, 255, 255) transparent transparent; position: relative; top: 10px; z-index: 1;"></div><div style="border-width: 11px; border-style: solid; border-color: transparent rgb(215, 215, 215) transparent transparent; position: relative; top: -11px; z-index: 0;"></div></div></div>
+</body>
+<div id="kucoin_extention_connect"></div>
+</html>

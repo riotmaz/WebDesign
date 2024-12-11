@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var held=parseInt(prompt("Number of Classes held:"))
+        var attend=parseInt(prompt("Number of Class attended:"))
+        
+        percent=(attend/held)*100
+
+        if(percent<75 && percent>=0){
+            document.write("Your attendance is "+percent+"%<br>")
+            document.write("You are not eligible to appear in the Exam")
+        }
+        else if(percent>=75 && percent<=100){
+            document.write("Your attendance is "+percent+"%<br>")
+            document.write("You are eligible to appear in the exam")
+        }
+        else{
+            document.write("Invalid Input, percentage error")
+        }
+
+    </script> 
+</body>
+</html> 

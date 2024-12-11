@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var m=parseInt(prompt("Enter the number of the month:"))
+        
+        if(m===1){
+            document.write(m+"st month has 31 days")
+        }
+        else if(m===3){
+            document.write(m+"rd month has 31 days")
+        }
+        else if(m===5 || m===7 || m===8 || m===10 || m===12){
+            document.write(m+"th month has 31 days")
+        }
+        else if(m===2){
+            document.write(m+"nd month has 28 days and 29 days in leap year")
+        }
+        else if(m===4 || m===6 || m===9 || m===11){
+            document.write(m+"th month has 30 days")
+        }
+        else{
+            document.write("Invalid Input. Month doesn't exist")
+        }
+    </script>
+</body>
+</html>
