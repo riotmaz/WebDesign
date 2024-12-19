@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isPrime(number) {
+    let isPrimeno = true;
+
+    if (number <= 1) {
+        isPrimeno = false;
+    } else if (number <= 3) {
+        isPrimeno = true;
+    } else if (number % 2 === 0 || number % 3 === 0) {
+        isPrimeno = false;
+    } else {
+        for (let i = 5; i * i <= number; i += 6) {
+            if (number % i === 0 || number % (i + 2) === 0) {
+                isPrimeno = false;
+                break;
+            }
+        }
+    }
+    return isPrimeno;
+}
+
+const num = parseInt(prompt("Enter a number to check:"));
+document.write(`${num} is ${isPrime(num) ? 'a prime' : 'not a prime'} number.`);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+var number = parseInt(prompt("Enter a positive integer to find its factorial:"));
+
+
+if (isNaN(number) || number < 0) {
+    document.write("Please enter a valid positive integer.");
+} else {
+    let factorial = 1;
+
+
+    for (let i = 1; i <= number; i++) {
+        factorial *= i; 
+    }
+
+    
+    document.write(`<h3>The factorial of ${number} is:</h3> ${factorial}`);
+}
+
+</script>
+</body>
+</html>

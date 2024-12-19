@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var max = 500;
+var exp = max.toString().length;
+
+var num = 1;
+while (num <= max) {
+    var temp = num;
+    var sum = 0;
+    var digits = 0;
+
+    
+    while (temp > 0) {
+        var digit = temp % 10;
+        sum += Math.pow(digit, exp);
+        temp = Math.floor(temp / 10);
+        digits++;
+    }
+
+    if (digits > 1 && sum === num) {
+        document.write(num + "<br>");
+    }
+
+    num++;
+}
+
+
+
+
+    </script>
+</body>
+</html>

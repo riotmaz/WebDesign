@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #000000;
+        }
+        button{
+            color: black;
+            background-color: Yellow;
+            border: 5px solid rgb(255, 0, 0);
+            border-radius: 7px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        button:hover{
+            background-color: yellowgreen;
+            border: 5px solid rgb(100, 2, 2);
+        }
+    
+        
+    </style>
+</head>
+<body>
+    <div>
+    <button type="button" onclick="armstrongNumber()">Click to Run armstrong number</button><br>
+    <button type="button" onclick="attendance()">Click to Run attendance</button><br>
+    <button type="button" onclick="dowhileadd()">Click to Run Do while add</button><br>
+    <button type="button" onclick="factorialvalue()">Click to Run factorial value</button><br>
+    <button type="button" onclick="gradesystem()">Click to Run grade system</button><br>
+    <button type="button" onclick="greatestnum()">Click to Run greatest number</button><br>
+    <button type="button" onclick="leapyear()">Click to Run Leap year</button><br>
+    <button type="button" onclick="multitable()">Click to Run Multi-table</button>
+    </div>
+    <script>
+        function armstrongNumber(){
+            var max = 500;
+var exp = max.toString().length;
+
+var num = 1;
+while (num <= max) {
+    var temp = num;
+    var sum = 0;
+    var digits = 0;
+
+    
+    while (temp > 0) {
+        var digit = temp % 10;
+        sum += Math.pow(digit, exp);
+        temp = Math.floor(temp / 10);
+        digits++;
+    }
+
+    if (digits > 1 && sum === num) {
+        document.write(num + "<br>");
+    }
+
+    num++;
+}
+
+        }
+        function attendance(){
+            var held=parseInt(prompt("Number of Classes held:"))
+        var attend=parseInt(prompt("Number of Class attended:"))
+        
+        percent=(attend/held)*100
+
+        if(percent<75 && percent>=0){
+            document.write("Your attendance is "+percent+"%<br>")
+            document.write("You are not eligible to appear in the Exam")
+        }
+        else if(percent>=75 && percent<=100){
+            document.write("Your attendance is "+percent+"%<br>")
+            document.write("You are eligible to appear in the exam")
+        }
+        else{
+            document.write("Invalid Input, percentage error")
+        }
+        }
+        
+        function dowhileadd(){
+            do {
+    var num1 = parseFloat(prompt("Enter the first number:"));
+    var num2 = parseFloat(prompt("Enter the second number:"));
+
+    if (isNaN(num1) || isNaN(num2)) {
+        alert("Please enter valid numbers.");
+        continue;
+    }
+
+    var sum = num1 + num2;
+
+    document.write(`The sum of ${num1} and ${num2} is: ${sum}<br>`);
+
+    var repeat = prompt("Do you want to perform the operation again? (yes/no)").toLowerCase();
+
+} while (repeat === "yes");
+
+document.write("Thank you for using the program!");
+        }
+
+        function factorialvalue(){
+            var number = parseInt(prompt("Enter a positive integer to find its factorial:"));
+
+
+if (isNaN(number) || number < 0) {
+    document.write("Please enter a valid positive integer.");
+} else {
+    let factorial = 1;
+
+
+    for (let i = 1; i <= number; i++) {
+        factorial *= i; 
+    }
+
+    
+    document.write(`<h3>The factorial of ${number} is:</h3> ${factorial}`);
+}
+
+        }
+
+        function gradesystem(){
+            var mark=parseInt(prompt("Enter the Mark:"))
+
+if(mark<25 && mark>=0){
+    document.write(mark+" is a F grade")
+}
+else if(mark>=25 && mark<45){
+    document.write(mark+" is a E grade")
+}
+else if(mark>=45 && mark<50){
+    document.write(mark+" is a D grade")
+}
+else if(mark>=50 && mark<60){
+    document.write(mark+" is a C grade")
+}
+else if(mark>=60 && mark<80){
+    document.write(mark+" is a B grade")
+}
+else if(mark>=80){
+    document.write(mark+" is a A grade")
+}
+else{
+    document.write("Invalid input, Grade doesn't exist")
+}
+        }
+
+        function greatestnum(){
+            var x= parseInt(prompt("Enter a value"));
+        var y= parseInt(prompt("Enter a value"));
+        var z= parseInt(prompt("Enter a value"));
+
+        if(x>y && x>z){
+            document.write(x+" is greater")
+        }
+        else if(y>x && y>z){
+            document.write(y+" is greater")
+        }
+        else if(z>x && z>y){
+            document.write(z+" is greater")
+        }
+        }
+
+        function leapyear(){
+            var year=parseInt(prompt("Enter the year:"))
+        if(year%4===0){
+            document.write(year+" is a Leap Year")
+        }
+        else{
+            document.write(year+" is not a Leap Year")
+        }
+        }
+
+        function multitable(){
+            var number = parseInt(prompt("Enter a positive integer:"));
+
+
+if (isNaN(number) || number <= 0) {
+    document.write("Please enter a valid positive integer.");
+} else {
+    document.write(`<h3>Multiplication Table for ${number}:</h3>`);
+    for (var i = 1; i <= 10; i++) {
+        document.write(`${number * i}<br>`);
+    }
+}
+        }
+    </script>
+</body>
+</html>
