@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const  numbers=[393, 751, 659, 975, 914, 48, 761, 669, 403, 707, 
+253, 147, 28, 487, 272, 337, 760, 255, 247, 329, 
+380, 245, 847, 595, 735, 700, 640, 362, 358, 668, 
+489, 891, 423, 469, 286, 56, 68, 643, 612, 409, 
+976, 410, 461, 822, 442, 887, 505, 336, 530, 966]
+;
+        const result=numbers
+        .filter(num => num % 5 ===0 )
+        .map(num => num + num)
+        .reduce((acc, num)=>acc+num,0);
+
+        document.write(result);
+    </script>
+</body>
+</html>

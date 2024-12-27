@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function factorial(x) {
+            let fact = 1;
+            for (let i = 1; i <= x; i++) {
+                fact *= i;
+            }
+            return fact;
+        }
+
+        function permutation(n, r) {
+            return factorial(n) / factorial(n - r);
+        }
+
+        function combination(n, r) {
+            return permutation(n, r) / factorial(r);
+        }
+
+        function nextcomb() {
+            var result = factorial(5);
+            var result1 = permutation(5, 3);
+            var result2 = combination(5, 3);
+
+            document.write("Factorial value = " + result + "<br>");
+            document.write("Permutation value = " + result1 + "<br>");
+            document.write("Combination value = " + result2);
+        }
+    </script>
+    <button type="button" onclick="nextcomb()">Click me</button>
+</body>
+</html>

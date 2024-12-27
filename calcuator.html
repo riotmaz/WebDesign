@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #d4d4d4;
+    }
+
+    .gradient-background {
+      width: 100%;
+      height: 100vh;
+      animation: gradientAnimation 10s infinite;
+      background-size: 400% 400%;
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        background: linear-gradient(to bottom, #d0ff00, #ff6f00);
+      }
+      25% {
+        background: linear-gradient(to bottom, #7b00ff, #005eff);
+      }
+      50% {
+        background: linear-gradient(to bottom, #00ffae, #004891);
+      }
+      75% {
+        background: linear-gradient(to bottom, #ff2a00, #ff0073);
+      }
+      100% {
+        background: linear-gradient(to bottom, #7e4436, #ff6f00);
+      }
+    }
+
+    .calculator {
+      width: 90%;
+      max-width: 400px;
+      background: linear-gradient(145deg, #e6e6e6, #ffffff);
+      border-radius: 20px;
+      box-shadow: 8px 8px 20px #bfbfbf, -8px -8px 20px #ffffff;
+      padding: 20px;
+      margin: auto;
+    }
+
+    #display {
+      width: 94%;
+      height: 70px;
+      border: none;
+      background: #333;
+      color: #fff;
+      font-size: 1.5rem;
+      text-align: right;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: inset 2px 2px 5px #2b2b2b, inset -2px -2px 5px #3b3b3b;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    button {
+      height: 60px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(145deg, #e6e6e6, #ffffff);
+      box-shadow: 5px 5px 10px #bfbfbf, -5px -5px 10px #ffffff;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+
+    button:hover {
+      background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    }
+
+    button:active {
+      background: linear-gradient(145deg, #d6d6d6, #e0e0e0);
+      box-shadow: inset 5px 5px 10px #bfbfbf, inset -5px -5px 10px #ffffff;
+    }
+
+    button:nth-child(4n) {
+      background: linear-gradient(145deg, #ff9800, #ffc107);
+      color: #fff;
+    }
+
+    button:nth-child(4n):hover {
+      background: linear-gradient(145deg, #ffc107, #ffd54f);
+    }
+
+    button:nth-child(4n):active {
+      background: linear-gradient(145deg, #e68900, #ffb000);
+      box-shadow: inset 5px 5px 10px #b36b00, inset -5px -5px 10px #ffcd1a;
+    }
+
+    button:last-child {
+      background: linear-gradient(145deg, #2196f3, #42a5f5);
+      color: #fff;
+    }
+
+    button:last-child:hover {
+      background: linear-gradient(145deg, #42a5f5, #64b5f6);
+    }
+
+    button:last-child:active {
+      background: linear-gradient(145deg, #1976d2, #2196f3);
+      box-shadow: inset 5px 5px 10px #0f5b9e, inset -5px -5px 10px #2e88da;
+    }
+
+    @media (max-width: 480px) {
+      .calculator {
+        width: 95%;
+      }
+
+      button {
+        height: 50px;
+        font-size: 1rem;
+      }
+
+      #display {
+        font-size: 1.2rem;
+        height: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="gradient-background">
+    <div class="calculator">
+      <input type="text" id="display" disabled>
+      <div class="buttons">
+        <button onclick="appendNumber('7')">7</button>
+        <button onclick="appendNumber('8')">8</button>
+        <button onclick="appendNumber('9')">9</button>
+        <button onclick="performOperation('/')">/</button>
+        <button onclick="appendNumber('4')">4</button>
+        <button onclick="appendNumber('5')">5</button>
+        <button onclick="appendNumber('6')">6</button>
+        <button onclick="performOperation('*')">*</button>
+        <button onclick="appendNumber('1')">1</button>
+        <button onclick="appendNumber('2')">2</button>
+        <button onclick="appendNumber('3')">3</button>
+        <button onclick="performOperation('-')">-</button>
+        <button onclick="appendNumber('0')">0</button>
+        <button onclick="appendNumber('.')">.</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="performOperation('+')">+</button>
+        <button onclick="clearDisplay()">C</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    let currentInput = '';
+    let previousInput = '';
+    let operator = '';
+
+    function appendNumber(number) {
+      currentInput += number;
+      updateDisplay();
+    }
+
+    function performOperation(op) {
+      if (currentInput === '' && previousInput === '') return;
+      if (currentInput === '' && previousInput !== '') {
+        operator = op;
+        updateDisplay();
+        return;
+      }
+      if (previousInput !== '') calculate();
+      operator = op;
+      previousInput = currentInput;
+      currentInput = '';
+      updateDisplay();
+    }
+
+    function calculate() {
+      if (currentInput === '' || previousInput === '') return;
+      const current = parseFloat(currentInput);
+      const previous = parseFloat(previousInput);
+      let result;
+
+      switch (operator) {
+        case '+':
+          result = previous + current;
+          break;
+        case '-':
+          result = previous - current;
+          break;
+        case '*':
+          result = previous * current;
+          break;
+        case '/':
+          result = previous / current;
+          break;
+        default:
+          return;
+      }
+
+      currentInput = result.toString();
+      operator = '';
+      previousInput = '';
+      updateDisplay();
+    }
+
+    function clearDisplay() {
+      currentInput = '';
+      previousInput = '';
+      operator = '';
+      updateDisplay();
+    }
+
+    function updateDisplay() {
+      const display = document.getElementById('display');
+      if (operator) {
+        display.value = `${previousInput} ${operator} ${currentInput}`;
+      } else {
+        display.value = currentInput || previousInput;
+      }
+    }
+  </script>
+</body>
+</html>
