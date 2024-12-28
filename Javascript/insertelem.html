@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Insert Element in Array</title>
+</head>
+<body>
+  <script>
+    let arr = ["apple", "banana", "cherry"];
+
+    arr.unshift("orange"); 
+
+    arr.push("grape"); 
+
+    let position = 2; 
+    let element = "mango";
+    arr.splice(position, 0, element);
+
+    document.write(arr.join(", "));
+  </script>
+</body>
+</html>

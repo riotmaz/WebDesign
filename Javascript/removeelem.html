@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Remove Element from Array</title>
+</head>
+<body>
+  <script>
+    let arr = ["apple", "banana", "cherry", "orange", "grape"];
+
+    let elementToRemove = "cherry";
+
+    let index = arr.indexOf(elementToRemove);
+
+    if (index !== -1) {
+      arr.splice(index, 1); 
+    }
+
+    document.write("Updated Array: " + arr.join(", "));
+  </script>
+</body>
+</html>
