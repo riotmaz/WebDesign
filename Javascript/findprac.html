@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const books = [
+  { id: 1, title: "The Great Gatsby", author: "F. Scott Fitzgerald", available: true },
+  { id: 2, title: "1984", author: "George Orwell", available: false },
+  { id: 3, title: "To Kill a Mockingbird", author: "Harper Lee", available: true },
+  { id: 4, title: "Moby-Dick", author: "Herman Melville", available: false }
+];
+
+//Use find() to get the details of the book with the title "1984".
+const book1984 = books.find(b => b.title === "1984"); 
+console.log("Details of '1984':", book1984);
+
+//Use findIndex() to find the index of the book with ID 3.
+const indexId3 = books.findIndex(b => b.id === 3); //2
+console.log("Index of Book ID 3:", indexId3);
+
+//Extract all authors from the collection into an array and use includes() to check if the author "Harper Lee" exists in the collection.
+const authors = books.map(b => b.author); //3
+const hasHarperLee = authors.includes("Harper Lee");
+console.log("Is Harper Lee in the collection?", hasHarperLee);
+
+//Find the first book that is available using find().
+const firstAvailable = books.find(b => b.available); //4
+console.log("First Available Book:", firstAvailable);
+
+//Use findIndex() to get the index of a book written by "Herman Melville".
+const indexHerman = books.findIndex(b => b.author === "Herman Melville"); //5
+console.log("Index of Herman Melville's Book:", indexHerman);
+
+//Check if the author "J.K. Rowling" exists in the collection using includes().
+const hasJKRowling = authors.includes("J.K. Rowling"); //6
+console.log("Is J.K. Rowling in the collection?", hasJKRowling);
+
+
+    </script>
+</body>
+</html>

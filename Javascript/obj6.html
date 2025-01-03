@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+function mergeArrays(arr1, arr2, key) {
+    const map = new Map();
+
+    arr1.forEach(item => map.set(item[key], { ...item }));
+
+    arr2.forEach(item => {
+        if (map.has(item[key])) {
+            map.set(item[key], { ...map.get(item[key]), ...item });
+        } else {
+            map.set(item[key], { ...item });
+        }
+    });
+
+    return Array.from(map.values());
+}
+
+const arr1 = [
+    { id: 1, name: "Alice", age: 25 },
+    { id: 2, name: "Bob", age: 30 }
+];
+
+const arr2 = [
+    { id: 1, city: "Wonderland" },
+    { id: 3, name: "Charlie", city: "Dreamland" }
+];
+
+const mergedArray = mergeArrays(arr1, arr2, 'id');
+console.log(mergedArray);
+
+</script>
+</body>
+</html>

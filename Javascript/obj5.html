@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+function deepClone(obj) {
+    
+    if (obj === null || typeof obj !== 'object') {
+        return obj;
+    }
+
+    if (Array.isArray(obj)) {
+        return obj.map(item => deepClone(item)); 
+    }
+
+    const clonedObj = {};
+    for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            clonedObj[key] = deepClone(obj[key]); 
+        }
+    }
+    return clonedObj;
+}
+
+const original = {
+    name: "Alice",
+    age: 25,
+    address: {
+        city: "Wonderland",
+        zip: "12345"
+    },
+    hobbies: ["reading", "chess"],
+    preferences: {
+        food: ["pizza", "pasta"],
+        colors: {
+            primary: "blue",
+            secondary: "green"
+        }
+    }
+};
+
+const clone = deepClone(original);
+
+clone.address.city = "Dreamland";
+clone.hobbies.push("music");
+clone.preferences.colors.primary = "red";
+
+console.log("Original:", original);
+console.log("Clone:", clone);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+function validateNestedProperty(obj, path) {
+    return path.every(key => {
+        if (obj && obj.hasOwnProperty(key)) {
+            obj = obj[key];
+            return true;
+        }
+        return false; 
+    });
+}
+
+const data = {
+    user: {
+        profile: {
+            name: "Alice",
+            address: {
+                city: "Wonderland"
+            }
+        }
+    }
+};
+
+const path1 = ['user', 'profile', 'address', 'city'];
+const path2 = ['user', 'profile', 'phone'];
+
+console.log(validateNestedProperty(data, path1)); 
+console.log(validateNestedProperty(data, path2)); 
+    </script>
+</body>
+</html>

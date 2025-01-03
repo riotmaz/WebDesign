@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+function updateEmail(user, email) {
+    user.email = email;
+    return user;
+}
+
+let user = {
+    name: "John Doe",
+    age: 30
+};
+
+console.log("Before:", user);
+
+updateEmail(user, "john.doe@example.com");
+
+console.log("After:", user);
+
+
+</script>
+</body>
+</html>

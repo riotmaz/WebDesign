@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+function isPalindrome(str) {
+    return str === str.split('').reverse().join('');
+}
+
+function findPalindromeKeys(obj) {
+    const result = {};
+    for (let key in obj) {
+        if (obj.hasOwnProperty(key) && isPalindrome(key)) {
+            result[key] = obj[key];
+        }
+    }
+    return result;
+}
+
+const data = {
+    level: 10,
+    radar: "active",
+    hello: "world",
+    noon: "time",
+    test: 123
+};
+
+const palindromeKeys = findPalindromeKeys(data);
+console.log(palindromeKeys);
+
+    </script>
+</body>
+</html>

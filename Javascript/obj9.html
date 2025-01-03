@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+function calculateFrequency(arr, key) {
+    const frequency = {};
+
+    arr.forEach(obj => {
+        if (obj.hasOwnProperty(key)) {
+            const value = obj[key];
+
+            frequency[value] = (frequency[value] || 0) + 1;
+        }
+    });
+
+    return frequency;
+}
+
+const data = [
+    { id: 1, category: "fruit", name: "apple" },
+    { id: 2, category: "vegetable", name: "carrot" },
+    { id: 3, category: "fruit", name: "banana" },
+    { id: 4, category: "fruit", name: "apple" },
+    { id: 5, category: "vegetable", name: "carrot" }
+];
+
+const frequency = calculateFrequency(data, "name");
+console.log(frequency);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+function logProperties(obj) {
+    for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            console.log(`${key}: ${obj[key]}`);
+        }
+    }
+}
+
+const user = {
+    name: "Alice",
+    age: 25,
+    email: "alice@example.com"
+};
+
+logProperties(user);
+
+</script>
+</body>
+</html>

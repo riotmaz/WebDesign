@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+function flattenObject(obj, parentKey = '', result = {}) {
+    for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            const newKey = parentKey ? `${parentKey}.${key}` : key;
+
+            if (typeof obj[key] === 'object' && obj[key] !== null) {
+                flattenObject(obj[key], newKey, result);
+            } else {
+                result[newKey] = obj[key];
+            }
+        }
+    }
+    return result;
+}
+
+const nestedObj = {
+    name: "Alice",
+    address: {
+        city: "Wonderland",
+        postal: {
+            code: "12345",
+            region: "Fantasy"
+        }
+    },
+    hobbies: ["reading", "chess"]
+};
+
+const flattened = flattenObject(nestedObj);
+console.log(flattened);
+
+    </script>
+</body>
+</html>
